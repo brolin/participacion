@@ -2,10 +2,59 @@ extends ../layout
 include ../mixins/form-helpers
 
 block content
+  ul.nav.nav-tabs
+    li#active
+      a(href="#1",data-toggle="tab") 1. IDENTIFICACIÓN DE LA ENCUESTA
+    li
+      a(href="#2",data-toggle="tab") 2. PERSONAS QUE RESPONDEN EL INSTRUMENTO
+    li
+      a(href="#3",data-toggle="tab") 3. INFORMACIÓN GENERAL DE LA ORGANIZACIÓN
+    li
+      a(href="#4",data-toggle="tab") 4. ESTRUCTURA DE LA ORGANIZACIÓN
+    li
+      a(href="#5",data-toggle="tab") 5. CARACTERÍSTICAS DIFERENCIALES DE LOS ASOCIADOS Y ASOCIADAS
+    li
+      a(href="#7",data-toggle="tab") 7. PLANEACIÓN Y RECURSOS
+    li
+      a(href="#8",data-toggle="tab") 8. INFORMACIÓN Y COMUNICACIÓN
+    li
+      a(href="#9",data-toggle="tab") 9. FORMACIÓN
+    li
+      a(href="#10",data-toggle="tab") 10. ACCIONES Y DERECHOS
+    li
+      a(href="#11",data-toggle="tab") 11. ESPACIOS DE PARTICIPACIÓN, ARTICULACIÓN Y ORIENTACIÓN
+    li
+      a(href="#12",data-toggle="tab") 12. DATOS DEL FACILITADOR
+
+  #myTabContent(class="tab-content")
+    #1(class="tab-pane fade active in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #2(class="tab-pane fade in") 2kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #3(class="tab-pane fade in") 3kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #4(class="tab-pane fade in") 4kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #5(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #6(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #7(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #8(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #9(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #10(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #11(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+    #12(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+
+  div.accordion#accordion2
+    div.accordion-group
+      div.accordion-heading
+        a.accordion-toggle(data-toggle="collapse",data-parent="#accordion2",href="#collapseOne") Collapsible Group Item #1
+      div#collapseOne.accordion-body.collapse.in
+        div.accordion-inner Anim pariatur cliche...
+    div.accordion-group
+      div.accordion-heading
+        a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseTwo") Collapsible Group Item #2
+      div#collapseTwo.accordion-body.collapse
+        div.accordion-inner Anim pariatur cliche...
 
   form#cuestionario-form.form-horizontal(action="/cuestionarios/create", method="POST")
     fieldset
-      legend Create a new Cuestionario
+      legend 1. IDENTIFICACIÓN DE LA ENCUESTA
 
       .control-group
         mixin label("codigo", preguntas.codigo)
@@ -22,6 +71,8 @@ block content
         .controls
           mixin text("municipio", cuestionario.municipio)
           mixin errorMessage(cuestionario, 'municipio')
+
+      legend 2. PERSONAS QUE RESPONDEN EL INSTRUMENTO
       .control-group
         mixin label("nombre", preguntas.nombre)
         .controls
@@ -47,6 +98,8 @@ block content
         .controls
           mixin text("correo_electronico", cuestionario.correo_electronico)
           mixin errorMessage(cuestionario, 'correo_electronico')
+
+      legend 3. INFORMACIÓN GENERAL DE LA ORGANIZACIÓN
       .control-group
         mixin label("nombre_organizacion", preguntas.nombre_organizacion)
         .controls
@@ -167,6 +220,8 @@ block content
         .controls
           mixin textarea("motivo_aumentdismi", cuestionario.motivo_aumentdismi)
           mixin errorMessage(cuestionario, 'motivo_aumentdismi')
+
+      legend 4. ESTRUCTURA DE LA ORGANIZACIÓN
       .control-group
         mixin label("figura_directiva", preguntas.figura_directiva)
         .controls
@@ -287,6 +342,8 @@ block content
         .controls
           mixin text("otro_como_tramitan_conflictos", cuestionario.otro_como_tramitan_conflictos)
           mixin errorMessage(cuestionario, 'otro_como_tramitan_conflictos')
+
+      legend 5. CARACTERÍSTICAS DIFERENCIALES DE LOS ASOCIADOS Y ASOCIADAS
       .control-group
         mixin label("registra_diferencial", preguntas.registra_diferencial)
         .controls
@@ -317,6 +374,8 @@ block content
         .controls
           mixin text("otro_cual_enfoque", cuestionario.otro_cual_enfoque)
           mixin errorMessage(cuestionario, 'otro_cual_enfoque')
+
+      legend 6. HECHOS VICTIMIZANTES
       .control-group
         mixin label("asociados_no_victimas", preguntas.asociados_no_victimas)
         .controls
@@ -367,6 +426,8 @@ block content
         .controls
           mixin text("otro_tipos_victimiz_trabajo_por", cuestionario.otro_tipos_victimiz_trabajo_por)
           mixin errorMessage(cuestionario, 'otro_tipos_victimiz_trabajo_por')
+
+      legend 7. PLANEACIÓN Y RECURSOS
       .control-group
         mixin label("org_cuenta_con", preguntas.org_cuenta_con)
         .controls
@@ -457,6 +518,8 @@ block content
         .controls
           mixin text("otro_destino_recursos_planeacion", cuestionario.otro_destino_recursos_planeacion)
           mixin errorMessage(cuestionario, 'otro_destino_recursos_planeacion')
+
+      legend 8. INFORMACIÓN Y COMUNICACIÓN
       .control-group
         mixin label("cuales_medios_comunicacion", preguntas.cuales_medios_comunicacion)
         .controls
@@ -517,6 +580,8 @@ block content
         .controls
           mixin text("otros_mecanismos_recepcion_informacion", cuestionario.otros_mecanismos_recepcion_informacion)
           mixin errorMessage(cuestionario, 'otros_mecanismos_recepcion_informacion')
+
+      legend 9. FORMACIÓN
       .control-group
         mixin label("han_recibido_formacion", preguntas.han_recibido_formacion)
         .controls
@@ -537,6 +602,8 @@ block content
         .controls
           mixin select("replica_formacion_a_organizaciones_victimas_cercanas", cuestionario.replica_formacion_a_organizaciones_victimas_cercanas, opcionesRespuesta.replica_formacion_a_organizaciones_victimas_cercanas)
           mixin errorMessage(cuestionario, 'replica_formacion_a_organizaciones_victimas_cercanas')
+
+      legend 10. ACCIONES Y DERECHOS
       .control-group
         mixin label("derechos_organizacion_trabaja", preguntas.derechos_organizacion_trabaja)
         .controls
@@ -597,6 +664,8 @@ block content
         .controls
           mixin select("organizacion_orienta_despojo", cuestionario.organizacion_orienta_despojo, opcionesRespuesta.organizacion_orienta_despojo)
           mixin errorMessage(cuestionario, 'organizacion_orienta_despojo')
+
+      legend 11. ESPACIOS DE PARTICIPACIÓN, ARTICULACIÓN Y ORIENTACIÓN
       .control-group
         mixin label("organizacion_inscrita_otras_orga", preguntas.organizacion_inscrita_otras_orga)
         .controls
@@ -692,6 +761,8 @@ block content
         .controls
           mixin selectMultiple("organizacion_apoyo_en", cuestionario.organizacion_apoyo_en, opcionesRespuesta.organizacion_apoyo_en)
           mixin errorMessage(cuestionario, 'organizacion_apoyo_en')
+
+      legend 12. DATOS DEL FACILITADOR
       .control-group
         mixin label("nombre_facilitador", preguntas.nombre_facilitador)
         .controls
