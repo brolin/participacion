@@ -1,0 +1,728 @@
+extends ../layout
+include ../mixins/form-helpers
+
+block content
+  form#cuestionario-form.form-horizontal(action="/cuestionarios/" + cuestionario._id + "/edit", method="POST")
+    fieldset
+      legend Edit Cuestionario
+
+      .control-group
+        mixin label("codigo", "Codigo")        
+        .controls
+          mixin text("codigo", cuestionario.codigo)
+          mixin errorMessage(cuestionario, 'codigo')
+      .control-group
+        mixin label("fecha_aplicacion", "Fecha_aplicacion")        
+        .controls
+          mixin date("fecha_aplicacion", cuestionario.fecha_aplicacion)
+          mixin errorMessage(cuestionario, 'fecha_aplicacion')
+      .control-group
+        mixin label("municipio", "Municipio")        
+        .controls
+          mixin text("municipio", cuestionario.municipio)
+          mixin errorMessage(cuestionario, 'municipio')
+      .control-group
+        mixin label("nombre", "Nombre")        
+        .controls
+          mixin text("nombre", cuestionario.nombre)
+          mixin errorMessage(cuestionario, 'nombre')
+      .control-group
+        mixin label("apellidos", "Apellidos")        
+        .controls
+          mixin text("apellidos", cuestionario.apellidos)
+          mixin errorMessage(cuestionario, 'apellidos')
+      .control-group
+        mixin label("cargo", "Cargo")        
+        .controls
+          mixin text("cargo", cuestionario.cargo)
+          mixin errorMessage(cuestionario, 'cargo')
+      .control-group
+        mixin label("telefono", "Telefono")        
+        .controls
+          mixin text("telefono", cuestionario.telefono)
+          mixin errorMessage(cuestionario, 'telefono')
+      .control-group
+        mixin label("correo_electronico", "Correo_electronico")        
+        .controls
+          mixin text("correo_electronico", cuestionario.correo_electronico)
+          mixin errorMessage(cuestionario, 'correo_electronico')
+      .control-group
+        mixin label("nombre_organizacion", "Nombre_organizacion")        
+        .controls
+          mixin text("nombre_organizacion", cuestionario.nombre_organizacion)
+          mixin errorMessage(cuestionario, 'nombre_organizacion')
+      .control-group
+        mixin label("sigla_organizacion", "Sigla_organizacion")        
+        .controls
+          mixin text("sigla_organizacion", cuestionario.sigla_organizacion)
+          mixin errorMessage(cuestionario, 'sigla_organizacion')
+      .control-group
+        mixin label("direccion_organizacion", "Direccion_organizacion")        
+        .controls
+          mixin text("direccion_organizacion", cuestionario.direccion_organizacion)
+          mixin errorMessage(cuestionario, 'direccion_organizacion')
+      .control-group
+        mixin label("municipio", "Municipio")        
+        .controls
+          mixin text("municipio", cuestionario.municipio)
+          mixin errorMessage(cuestionario, 'municipio')
+      .control-group
+        mixin label("comuna", "Comuna")        
+        .controls
+          mixin text("comuna", cuestionario.comuna)
+          mixin errorMessage(cuestionario, 'comuna')
+      .control-group
+        mixin label("corregimiento", "Corregimiento")        
+        .controls
+          mixin text("corregimiento", cuestionario.corregimiento)
+          mixin errorMessage(cuestionario, 'corregimiento')
+      .control-group
+        mixin label("vereda", "Vereda")        
+        .controls
+          mixin text("vereda", cuestionario.vereda)
+          mixin errorMessage(cuestionario, 'vereda')
+      .control-group
+        mixin label("barrio", "Barrio")        
+        .controls
+          mixin text("barrio", cuestionario.barrio)
+          mixin errorMessage(cuestionario, 'barrio')
+      .control-group
+        mixin label("telefono_fijo", "Telefono_fijo")        
+        .controls
+          mixin text("telefono_fijo", cuestionario.telefono_fijo)
+          mixin errorMessage(cuestionario, 'telefono_fijo')
+      .control-group
+        mixin label("celular", "Celular")        
+        .controls
+          mixin text("celular", cuestionario.celular)
+          mixin errorMessage(cuestionario, 'celular')
+      .control-group
+        mixin label("correo_electronico", "Correo_electronico")        
+        .controls
+          mixin text("correo_electronico", cuestionario.correo_electronico)
+          mixin errorMessage(cuestionario, 'correo_electronico')
+      .control-group
+        mixin label("tipo_organizacion", "Tipo_organizacion")        
+        .controls
+          mixin text("tipo_organizacion", cuestionario.tipo_organizacion)
+          mixin errorMessage(cuestionario, 'tipo_organizacion')
+      .control-group
+        mixin label("otra_cual_tipo_organizacion", "Otra_cual_tipo_organizacion")        
+        .controls
+          mixin text("otra_cual_tipo_organizacion", cuestionario.otra_cual_tipo_organizacion)
+          mixin errorMessage(cuestionario, 'otra_cual_tipo_organizacion')
+      .control-group
+        mixin label("objetivo_organizacion", "Objetivo_organizacion")        
+        .controls
+          mixin text("objetivo_organizacion", cuestionario.objetivo_organizacion)
+          mixin errorMessage(cuestionario, 'objetivo_organizacion')
+      .control-group
+        mixin label("cobertura_organiza", "Cobertura_organiza")        
+        .controls
+          mixin text("cobertura_organiza", cuestionario.cobertura_organiza)
+          mixin errorMessage(cuestionario, 'cobertura_organiza')
+      .control-group
+        mixin label("motivo_constitucion", "Motivo_constitucion")        
+        .controls
+          mixin text("motivo_constitucion", cuestionario.motivo_constitucion)
+          mixin errorMessage(cuestionario, 'motivo_constitucion')
+      .control-group
+        mixin label("fecha_constitucion", "Fecha_constitucion")        
+        .controls
+          mixin date("fecha_constitucion", cuestionario.fecha_constitucion)
+          mixin errorMessage(cuestionario, 'fecha_constitucion')
+      .control-group
+        mixin label("perso_juridica", "Perso_juridica")        
+        .controls
+          mixin text("perso_juridica", cuestionario.perso_juridica)
+          mixin errorMessage(cuestionario, 'perso_juridica')
+      .control-group
+        mixin label("num_personeria", "Num_personeria")        
+        .controls
+          mixin text("num_personeria", cuestionario.num_personeria)
+          mixin errorMessage(cuestionario, 'num_personeria')
+      .control-group
+        mixin label("requisitos_asociados", "Requisitos_asociados")        
+        .controls
+          mixin text("requisitos_asociados", cuestionario.requisitos_asociados)
+          mixin errorMessage(cuestionario, 'requisitos_asociados')
+      .control-group
+        mixin label("cuales_requisitos", "Cuales_requisitos")        
+        .controls
+          mixin text("cuales_requisitos", cuestionario.cuales_requisitos)
+          mixin errorMessage(cuestionario, 'cuales_requisitos')
+      .control-group
+        mixin label("cuantos_asociados_inicios", "Cuantos_asociados_inicios")        
+        .controls
+          mixin number("cuantos_asociados_inicios", cuestionario.cuantos_asociados_inicios)
+          mixin errorMessage(cuestionario, 'cuantos_asociados_inicios')
+      .control-group
+        mixin label("cuantos_asociados_actualmente", "Cuantos_asociados_actualmente")        
+        .controls
+          mixin number("cuantos_asociados_actualmente", cuestionario.cuantos_asociados_actualmente)
+          mixin errorMessage(cuestionario, 'cuantos_asociados_actualmente')
+      .control-group
+        mixin label("motivo_aumentdismi", "Motivo_aumentdismi")        
+        .controls
+          mixin textarea("motivo_aumentdismi", cuestionario.motivo_aumentdismi)
+          mixin errorMessage(cuestionario, 'motivo_aumentdismi')
+      .control-group
+        mixin label("figura_directiva", "Figura_directiva")        
+        .controls
+          mixin text("figura_directiva", cuestionario.figura_directiva)
+          mixin errorMessage(cuestionario, 'figura_directiva')
+      .control-group
+        mixin label("cual_figu_direc", "Cual_figu_direc")        
+        .controls
+          mixin text("cual_figu_direc", cuestionario.cual_figu_direc)
+          mixin errorMessage(cuestionario, 'cual_figu_direc')
+      .control-group
+        mixin label("cargo", "Cargo")        
+        .controls
+          mixin text("cargo", cuestionario.cargo)
+          mixin errorMessage(cuestionario, 'cargo')
+      .control-group
+        mixin label("directivos", "Directivos")        
+        .controls
+          mixin text("directivos", cuestionario.directivos)
+          mixin errorMessage(cuestionario, 'directivos')
+      .control-group
+        mixin label("genero", "Genero")        
+        .controls
+          mixin text("genero", cuestionario.genero)
+          mixin errorMessage(cuestionario, 'genero')
+      .control-group
+        mixin label("orient_sexual", "Orient_sexual")        
+        .controls
+          mixin text("orient_sexual", cuestionario.orient_sexual)
+          mixin errorMessage(cuestionario, 'orient_sexual')
+      .control-group
+        mixin label("edad", "Edad")        
+        .controls
+          mixin text("edad", cuestionario.edad)
+          mixin errorMessage(cuestionario, 'edad')
+      .control-group
+        mixin label("etnia", "Etnia")        
+        .controls
+          mixin text("etnia", cuestionario.etnia)
+          mixin errorMessage(cuestionario, 'etnia')
+      .control-group
+        mixin label("remuneracion", "Remuneracion")        
+        .controls
+          mixin text("remuneracion", cuestionario.remuneracion)
+          mixin errorMessage(cuestionario, 'remuneracion')
+      .control-group
+        mixin label("como_elige_directivos", "Como_elige_directivos")        
+        .controls
+          mixin text("como_elige_directivos", cuestionario.como_elige_directivos)
+          mixin errorMessage(cuestionario, 'como_elige_directivos')
+      .control-group
+        mixin label("comite_grupo_mesas", "Comite_grupo_mesas")        
+        .controls
+          mixin text("comite_grupo_mesas", cuestionario.comite_grupo_mesas)
+          mixin errorMessage(cuestionario, 'comite_grupo_mesas')
+      .control-group
+        mixin label("tipo_de_comites", "Tipo_de_comites")        
+        .controls
+          mixin text("tipo_de_comites", cuestionario.tipo_de_comites)
+          mixin errorMessage(cuestionario, 'tipo_de_comites')
+      .control-group
+        mixin label("otros_cual_comite", "Otros_cual_comite")        
+        .controls
+          mixin text("otros_cual_comite", cuestionario.otros_cual_comite)
+          mixin errorMessage(cuestionario, 'otros_cual_comite')
+      .control-group
+        mixin label("frecuen_figudirectiva", "Frecuen_figudirectiva")        
+        .controls
+          mixin text("frecuen_figudirectiva", cuestionario.frecuen_figudirectiva)
+          mixin errorMessage(cuestionario, 'frecuen_figudirectiva')
+      .control-group
+        mixin label("otra_frecuenc", "Otra_frecuenc")        
+        .controls
+          mixin text("otra_frecuenc", cuestionario.otra_frecuenc)
+          mixin errorMessage(cuestionario, 'otra_frecuenc')
+      .control-group
+        mixin label("frecuencia_reune_directivos_socios", "Frecuencia_reune_directivos_socios")        
+        .controls
+          mixin text("frecuencia_reune_directivos_socios", cuestionario.frecuencia_reune_directivos_socios)
+          mixin errorMessage(cuestionario, 'frecuencia_reune_directivos_socios')
+      .control-group
+        mixin label("mecanismo_decision", "Mecanismo_decision")        
+        .controls
+          mixin text("mecanismo_decision", cuestionario.mecanismo_decision)
+          mixin errorMessage(cuestionario, 'mecanismo_decision')
+      .control-group
+        mixin label("otro_cual_mecanism", "Otro_cual_mecanism")        
+        .controls
+          mixin text("otro_cual_mecanism", cuestionario.otro_cual_mecanism)
+          mixin errorMessage(cuestionario, 'otro_cual_mecanism')
+      .control-group
+        mixin label("quien_decide", "Quien_decide")        
+        .controls
+          mixin text("quien_decide", cuestionario.quien_decide)
+          mixin errorMessage(cuestionario, 'quien_decide')
+      .control-group
+        mixin label("otro_cual_quien_decide", "Otro_cual_quien_decide")        
+        .controls
+          mixin text("otro_cual_quien_decide", cuestionario.otro_cual_quien_decide)
+          mixin errorMessage(cuestionario, 'otro_cual_quien_decide')
+      .control-group
+        mixin label("conflictos_entre_integrantes", "Conflictos_entre_integrantes")        
+        .controls
+          mixin text("conflictos_entre_integrantes", cuestionario.conflictos_entre_integrantes)
+          mixin errorMessage(cuestionario, 'conflictos_entre_integrantes')
+      .control-group
+        mixin label("otros_conflictos", "Otros_conflictos")        
+        .controls
+          mixin text("otros_conflictos", cuestionario.otros_conflictos)
+          mixin errorMessage(cuestionario, 'otros_conflictos')
+      .control-group
+        mixin label("como_tramitan_conflictos", "Como_tramitan_conflictos")        
+        .controls
+          mixin text("como_tramitan_conflictos", cuestionario.como_tramitan_conflictos)
+          mixin errorMessage(cuestionario, 'como_tramitan_conflictos')
+      .control-group
+        mixin label("otro_como_tramitan_conflictos", "Otro_como_tramitan_conflictos")        
+        .controls
+          mixin text("otro_como_tramitan_conflictos", cuestionario.otro_como_tramitan_conflictos)
+          mixin errorMessage(cuestionario, 'otro_como_tramitan_conflictos')
+      .control-group
+        mixin label("registra_diferencial", "Registra_diferencial")        
+        .controls
+          mixin text("registra_diferencial", cuestionario.registra_diferencial)
+          mixin errorMessage(cuestionario, 'registra_diferencial')
+      .control-group
+        mixin label("otra_cual_diferencial", "Otra_cual_diferencial")        
+        .controls
+          mixin text("otra_cual_diferencial", cuestionario.otra_cual_diferencial)
+          mixin errorMessage(cuestionario, 'otra_cual_diferencial')
+      .control-group
+        mixin label("como_registra_diferencial", "Como_registra_diferencial")        
+        .controls
+          mixin text("como_registra_diferencial", cuestionario.como_registra_diferencial)
+          mixin errorMessage(cuestionario, 'como_registra_diferencial')
+      .control-group
+        mixin label("otra_como_registra_diferencial", "Otra_como_registra_diferencial")        
+        .controls
+          mixin text("otra_como_registra_diferencial", cuestionario.otra_como_registra_diferencial)
+          mixin errorMessage(cuestionario, 'otra_como_registra_diferencial')
+      .control-group
+        mixin label("enfoque_grupos", "Enfoque_grupos")        
+        .controls
+          mixin text("enfoque_grupos", cuestionario.enfoque_grupos)
+          mixin errorMessage(cuestionario, 'enfoque_grupos')
+      .control-group
+        mixin label("otro_cual_enfoque", "Otro_cual_enfoque")        
+        .controls
+          mixin text("otro_cual_enfoque", cuestionario.otro_cual_enfoque)
+          mixin errorMessage(cuestionario, 'otro_cual_enfoque')
+      .control-group
+        mixin label("asociados_no_victimas", "Asociados_no_victimas")        
+        .controls
+          mixin text("asociados_no_victimas", cuestionario.asociados_no_victimas)
+          mixin errorMessage(cuestionario, 'asociados_no_victimas')
+      .control-group
+        mixin label("hechos_victimizantes_asociados", "Hechos_victimizantes_asociados")        
+        .controls
+          mixin text("hechos_victimizantes_asociados", cuestionario.hechos_victimizantes_asociados)
+          mixin errorMessage(cuestionario, 'hechos_victimizantes_asociados')
+      .control-group
+        mixin label("otros_cuales_hechos_victimizantes", "Otros_cuales_hechos_victimizantes")        
+        .controls
+          mixin text("otros_cuales_hechos_victimizantes", cuestionario.otros_cuales_hechos_victimizantes)
+          mixin errorMessage(cuestionario, 'otros_cuales_hechos_victimizantes')
+      .control-group
+        mixin label("hechos_victimizantes_mas_frecuentes_1", "Hechos_victimizantes_mas_frecuentes_1")        
+        .controls
+          mixin text("hechos_victimizantes_mas_frecuentes_1", cuestionario.hechos_victimizantes_mas_frecuentes_1)
+          mixin errorMessage(cuestionario, 'hechos_victimizantes_mas_frecuentes_1')
+      .control-group
+        mixin label("hechos_victimizantes_mas_frecuentes_2", "Hechos_victimizantes_mas_frecuentes_2")        
+        .controls
+          mixin text("hechos_victimizantes_mas_frecuentes_2", cuestionario.hechos_victimizantes_mas_frecuentes_2)
+          mixin errorMessage(cuestionario, 'hechos_victimizantes_mas_frecuentes_2')
+      .control-group
+        mixin label("hechos_victimizantes_mas_frecuentes_3", "Hechos_victimizantes_mas_frecuentes_3")        
+        .controls
+          mixin text("hechos_victimizantes_mas_frecuentes_3", cuestionario.hechos_victimizantes_mas_frecuentes_3)
+          mixin errorMessage(cuestionario, 'hechos_victimizantes_mas_frecuentes_3')
+      .control-group
+        mixin label("hechos_victimizantes_mas_frecuentes_4", "Hechos_victimizantes_mas_frecuentes_4")        
+        .controls
+          mixin text("hechos_victimizantes_mas_frecuentes_4", cuestionario.hechos_victimizantes_mas_frecuentes_4)
+          mixin errorMessage(cuestionario, 'hechos_victimizantes_mas_frecuentes_4')
+      .control-group
+        mixin label("trabajo_por_hvespecifico", "Trabajo_por_hvespecifico")        
+        .controls
+          mixin text("trabajo_por_hvespecifico", cuestionario.trabajo_por_hvespecifico)
+          mixin errorMessage(cuestionario, 'trabajo_por_hvespecifico')
+      .control-group
+        mixin label("tipos_victimiz_trabajo_por", "Tipos_victimiz_trabajo_por")        
+        .controls
+          mixin text("tipos_victimiz_trabajo_por", cuestionario.tipos_victimiz_trabajo_por)
+          mixin errorMessage(cuestionario, 'tipos_victimiz_trabajo_por')
+      .control-group
+        mixin label("otro_tipos_victimiz_trabajo_por", "Otro_tipos_victimiz_trabajo_por")        
+        .controls
+          mixin text("otro_tipos_victimiz_trabajo_por", cuestionario.otro_tipos_victimiz_trabajo_por)
+          mixin errorMessage(cuestionario, 'otro_tipos_victimiz_trabajo_por')
+      .control-group
+        mixin label("org_cuenta_con", "Org_cuenta_con")        
+        .controls
+          mixin text("org_cuenta_con", cuestionario.org_cuenta_con)
+          mixin errorMessage(cuestionario, 'org_cuenta_con')
+      .control-group
+        mixin label("bienes", "Bienes")        
+        .controls
+          mixin text("bienes", cuestionario.bienes)
+          mixin errorMessage(cuestionario, 'bienes')
+      .control-group
+        mixin label("lugar_fisico", "Lugar_fisico")        
+        .controls
+          mixin text("lugar_fisico", cuestionario.lugar_fisico)
+          mixin errorMessage(cuestionario, 'lugar_fisico')
+      .control-group
+        mixin label("relacion_lugar", "Relacion_lugar")        
+        .controls
+          mixin text("relacion_lugar", cuestionario.relacion_lugar)
+          mixin errorMessage(cuestionario, 'relacion_lugar')
+      .control-group
+        mixin label("quien_financia", "Quien_financia")        
+        .controls
+          mixin text("quien_financia", cuestionario.quien_financia)
+          mixin errorMessage(cuestionario, 'quien_financia')
+      .control-group
+        mixin label("forma_financia", "Forma_financia")        
+        .controls
+          mixin text("forma_financia", cuestionario.forma_financia)
+          mixin errorMessage(cuestionario, 'forma_financia')
+      .control-group
+        mixin label("otra_financia", "Otra_financia")        
+        .controls
+          mixin text("otra_financia", cuestionario.otra_financia)
+          mixin errorMessage(cuestionario, 'otra_financia')
+      .control-group
+        mixin label("recursos_propios_como", "Recursos_propios_como")        
+        .controls
+          mixin text("recursos_propios_como", cuestionario.recursos_propios_como)
+          mixin errorMessage(cuestionario, 'recursos_propios_como')
+      .control-group
+        mixin label("otros_recursos_propios", "Otros_recursos_propios")        
+        .controls
+          mixin text("otros_recursos_propios", cuestionario.otros_recursos_propios)
+          mixin errorMessage(cuestionario, 'otros_recursos_propios')
+      .control-group
+        mixin label("tiene_recursos_funcionamiento", "Tiene_recursos_funcionamiento")        
+        .controls
+          mixin text("tiene_recursos_funcionamiento", cuestionario.tiene_recursos_funcionamiento)
+          mixin errorMessage(cuestionario, 'tiene_recursos_funcionamiento')
+      .control-group
+        mixin label("cuanto_dinero_2013", "Cuanto_dinero_2013")        
+        .controls
+          mixin text("cuanto_dinero_2013", cuestionario.cuanto_dinero_2013)
+          mixin errorMessage(cuestionario, 'cuanto_dinero_2013')
+      .control-group
+        mixin label("cuanto_dinero_mas", "Cuanto_dinero_mas")        
+        .controls
+          mixin text("cuanto_dinero_mas", cuestionario.cuanto_dinero_mas)
+          mixin errorMessage(cuestionario, 'cuanto_dinero_mas')
+      .control-group
+        mixin label("dineros_proyectos_2013", "Dineros_proyectos_2013")        
+        .controls
+          mixin text("dineros_proyectos_2013", cuestionario.dineros_proyectos_2013)
+          mixin errorMessage(cuestionario, 'dineros_proyectos_2013')
+      .control-group
+        mixin label("cuanto_dinero_admin_2013", "Cuanto_dinero_admin_2013")        
+        .controls
+          mixin text("cuanto_dinero_admin_2013", cuestionario.cuanto_dinero_admin_2013)
+          mixin errorMessage(cuestionario, 'cuanto_dinero_admin_2013')
+      .control-group
+        mixin label("cuanto_dinero_mas_proyecto_2013", "Cuanto_dinero_mas_proyecto_2013")        
+        .controls
+          mixin text("cuanto_dinero_mas_proyecto_2013", cuestionario.cuanto_dinero_mas_proyecto_2013)
+          mixin errorMessage(cuestionario, 'cuanto_dinero_mas_proyecto_2013')
+      .control-group
+        mixin label("funcion_interno", "Funcion_interno")        
+        .controls
+          mixin text("funcion_interno", cuestionario.funcion_interno)
+          mixin errorMessage(cuestionario, 'funcion_interno')
+      .control-group
+        mixin label("planeacion_ejecucion", "Planeacion_ejecucion")        
+        .controls
+          mixin text("planeacion_ejecucion", cuestionario.planeacion_ejecucion)
+          mixin errorMessage(cuestionario, 'planeacion_ejecucion')
+      .control-group
+        mixin label("otro_destino_recursos_planeacion", "Otro_destino_recursos_planeacion")        
+        .controls
+          mixin text("otro_destino_recursos_planeacion", cuestionario.otro_destino_recursos_planeacion)
+          mixin errorMessage(cuestionario, 'otro_destino_recursos_planeacion')
+      .control-group
+        mixin label("cuales_medios_comunicacion", "Cuales_medios_comunicacion")        
+        .controls
+          mixin text("cuales_medios_comunicacion", cuestionario.cuales_medios_comunicacion)
+          mixin errorMessage(cuestionario, 'cuales_medios_comunicacion')
+      .control-group
+        mixin label("otro_medios_comunicacion", "Otro_medios_comunicacion")        
+        .controls
+          mixin text("otro_medios_comunicacion", cuestionario.otro_medios_comunicacion)
+          mixin errorMessage(cuestionario, 'otro_medios_comunicacion')
+      .control-group
+        mixin label("rendicion_cuentas", "Rendicion_cuentas")        
+        .controls
+          mixin text("rendicion_cuentas", cuestionario.rendicion_cuentas)
+          mixin errorMessage(cuestionario, 'rendicion_cuentas')
+      .control-group
+        mixin label("forma_rendicion_cuentas", "Forma_rendicion_cuentas")        
+        .controls
+          mixin text("forma_rendicion_cuentas", cuestionario.forma_rendicion_cuentas)
+          mixin errorMessage(cuestionario, 'forma_rendicion_cuentas')
+      .control-group
+        mixin label("frecuencia_rendicion_cuentas", "Frecuencia_rendicion_cuentas")        
+        .controls
+          mixin text("frecuencia_rendicion_cuentas", cuestionario.frecuencia_rendicion_cuentas)
+          mixin errorMessage(cuestionario, 'frecuencia_rendicion_cuentas')
+      .control-group
+        mixin label("otra_frecuencia_rendicion_cuentas", "Otra_frecuencia_rendicion_cuentas")        
+        .controls
+          mixin text("otra_frecuencia_rendicion_cuentas", cuestionario.otra_frecuencia_rendicion_cuentas)
+          mixin errorMessage(cuestionario, 'otra_frecuencia_rendicion_cuentas')
+      .control-group
+        mixin label("medios_utiliza_comunicacion_interna", "Medios_utiliza_comunicacion_interna")        
+        .controls
+          mixin text("medios_utiliza_comunicacion_interna", cuestionario.medios_utiliza_comunicacion_interna)
+          mixin errorMessage(cuestionario, 'medios_utiliza_comunicacion_interna')
+      .control-group
+        mixin label("otros_medios_comunicacion_interna", "Otros_medios_comunicacion_interna")        
+        .controls
+          mixin text("otros_medios_comunicacion_interna", cuestionario.otros_medios_comunicacion_interna)
+          mixin errorMessage(cuestionario, 'otros_medios_comunicacion_interna')
+      .control-group
+        mixin label("medios_difusion_externos", "Medios_difusion_externos")        
+        .controls
+          mixin text("medios_difusion_externos", cuestionario.medios_difusion_externos)
+          mixin errorMessage(cuestionario, 'medios_difusion_externos')
+      .control-group
+        mixin label("otro_medios_difusion_externos", "Otro_medios_difusion_externos")        
+        .controls
+          mixin text("otro_medios_difusion_externos", cuestionario.otro_medios_difusion_externos)
+          mixin errorMessage(cuestionario, 'otro_medios_difusion_externos')
+      .control-group
+        mixin label("mecanismos_recepcion_informacion", "Mecanismos_recepcion_informacion")        
+        .controls
+          mixin text("mecanismos_recepcion_informacion", cuestionario.mecanismos_recepcion_informacion)
+          mixin errorMessage(cuestionario, 'mecanismos_recepcion_informacion')
+      .control-group
+        mixin label("otros_mecanismos_recepcion_informacion", "Otros_mecanismos_recepcion_informacion")        
+        .controls
+          mixin text("otros_mecanismos_recepcion_informacion", cuestionario.otros_mecanismos_recepcion_informacion)
+          mixin errorMessage(cuestionario, 'otros_mecanismos_recepcion_informacion')
+      .control-group
+        mixin label("han_recibido_formacion", "Han_recibido_formacion")        
+        .controls
+          mixin text("han_recibido_formacion", cuestionario.han_recibido_formacion)
+          mixin errorMessage(cuestionario, 'han_recibido_formacion')
+      .control-group
+        mixin label("otra_formacion", "Otra_formacion")        
+        .controls
+          mixin text("otra_formacion", cuestionario.otra_formacion)
+          mixin errorMessage(cuestionario, 'otra_formacion')
+      .control-group
+        mixin label("se_socializa_conocimiento", "Se_socializa_conocimiento")        
+        .controls
+          mixin text("se_socializa_conocimiento", cuestionario.se_socializa_conocimiento)
+          mixin errorMessage(cuestionario, 'se_socializa_conocimiento')
+      .control-group
+        mixin label("replica_formacion_a_organizaciones_victimas_cercanas", "Replica_formacion_a_organizaciones_victimas_cercanas")        
+        .controls
+          mixin text("replica_formacion_a_organizaciones_victimas_cercanas", cuestionario.replica_formacion_a_organizaciones_victimas_cercanas)
+          mixin errorMessage(cuestionario, 'replica_formacion_a_organizaciones_victimas_cercanas')
+      .control-group
+        mixin label("derechos_organizacion_trabaja", "Derechos_organizacion_trabaja")        
+        .controls
+          mixin text("derechos_organizacion_trabaja", cuestionario.derechos_organizacion_trabaja)
+          mixin errorMessage(cuestionario, 'derechos_organizacion_trabaja')
+      .control-group
+        mixin label("organizacion_orienta_asociados", "Organizacion_orienta_asociados")        
+        .controls
+          mixin text("organizacion_orienta_asociados", cuestionario.organizacion_orienta_asociados)
+          mixin errorMessage(cuestionario, 'organizacion_orienta_asociados')
+      .control-group
+        mixin label("organizacion_si_orienta_asociados", "Organizacion_si_orienta_asociados")        
+        .controls
+          mixin text("organizacion_si_orienta_asociados", cuestionario.organizacion_si_orienta_asociados)
+          mixin errorMessage(cuestionario, 'organizacion_si_orienta_asociados')
+      .control-group
+        mixin label("organizacion_estrategias_derechos", "Organizacion_estrategias_derechos")        
+        .controls
+          mixin text("organizacion_estrategias_derechos", cuestionario.organizacion_estrategias_derechos)
+          mixin errorMessage(cuestionario, 'organizacion_estrategias_derechos')
+      .control-group
+        mixin label("organizacion_circula_informacion", "Organizacion_circula_informacion")        
+        .controls
+          mixin text("organizacion_circula_informacion", cuestionario.organizacion_circula_informacion)
+          mixin errorMessage(cuestionario, 'organizacion_circula_informacion')
+      .control-group
+        mixin label("organizacion_si_circula_informacion", "Organizacion_si_circula_informacion")        
+        .controls
+          mixin text("organizacion_si_circula_informacion", cuestionario.organizacion_si_circula_informacion)
+          mixin errorMessage(cuestionario, 'organizacion_si_circula_informacion')
+      .control-group
+        mixin label("otro_organizacion_si_circula_informacion", "Otro_organizacion_si_circula_informacion")        
+        .controls
+          mixin text("otro_organizacion_si_circula_informacion", cuestionario.otro_organizacion_si_circula_informacion)
+          mixin errorMessage(cuestionario, 'otro_organizacion_si_circula_informacion')
+      .control-group
+        mixin label("organizacion_orienta_ante_estado", "Organizacion_orienta_ante_estado")        
+        .controls
+          mixin text("organizacion_orienta_ante_estado", cuestionario.organizacion_orienta_ante_estado)
+          mixin errorMessage(cuestionario, 'organizacion_orienta_ante_estado')
+      .control-group
+        mixin label("organizacion_si_orienta_ante_estado", "Organizacion_si_orienta_ante_estado")        
+        .controls
+          mixin text("organizacion_si_orienta_ante_estado", cuestionario.organizacion_si_orienta_ante_estado)
+          mixin errorMessage(cuestionario, 'organizacion_si_orienta_ante_estado')
+      .control-group
+        mixin label("organizacion_orienta_fiscalia", "Organizacion_orienta_fiscalia")        
+        .controls
+          mixin text("organizacion_orienta_fiscalia", cuestionario.organizacion_orienta_fiscalia)
+          mixin errorMessage(cuestionario, 'organizacion_orienta_fiscalia')
+      .control-group
+        mixin label("organizacion_orienta_ley1448", "Organizacion_orienta_ley1448")        
+        .controls
+          mixin text("organizacion_orienta_ley1448", cuestionario.organizacion_orienta_ley1448)
+          mixin errorMessage(cuestionario, 'organizacion_orienta_ley1448')
+      .control-group
+        mixin label("organizacion_orienta_despojo", "Organizacion_orienta_despojo")        
+        .controls
+          mixin text("organizacion_orienta_despojo", cuestionario.organizacion_orienta_despojo)
+          mixin errorMessage(cuestionario, 'organizacion_orienta_despojo')
+      .control-group
+        mixin label("organizacion_inscrita_otras_orga", "Organizacion_inscrita_otras_orga")        
+        .controls
+          mixin text("organizacion_inscrita_otras_orga", cuestionario.organizacion_inscrita_otras_orga)
+          mixin errorMessage(cuestionario, 'organizacion_inscrita_otras_orga')
+      .control-group
+        mixin label("organizacion_si_inscrita_otras_orga", "Organizacion_si_inscrita_otras_orga")        
+        .controls
+          mixin text("organizacion_si_inscrita_otras_orga", cuestionario.organizacion_si_inscrita_otras_orga)
+          mixin errorMessage(cuestionario, 'organizacion_si_inscrita_otras_orga')
+      .control-group
+        mixin label("organizacion_participa_otras_orga", "Organizacion_participa_otras_orga")        
+        .controls
+          mixin text("organizacion_participa_otras_orga", cuestionario.organizacion_participa_otras_orga)
+          mixin errorMessage(cuestionario, 'organizacion_participa_otras_orga')
+      .control-group
+        mixin label("organizacion_motivacion_otras_orga", "Organizacion_motivacion_otras_orga")        
+        .controls
+          mixin text("organizacion_motivacion_otras_orga", cuestionario.organizacion_motivacion_otras_orga)
+          mixin errorMessage(cuestionario, 'organizacion_motivacion_otras_orga')
+      .control-group
+        mixin label("organizacion_asiste_otros_espacios_participa", "Organizacion_asiste_otros_espacios_participa")        
+        .controls
+          mixin text("organizacion_asiste_otros_espacios_participa", cuestionario.organizacion_asiste_otros_espacios_participa)
+          mixin errorMessage(cuestionario, 'organizacion_asiste_otros_espacios_participa')
+      .control-group
+        mixin label("organizacion_si_asiste_otros_espacios_participa", "Organizacion_si_asiste_otros_espacios_participa")        
+        .controls
+          mixin text("organizacion_si_asiste_otros_espacios_participa", cuestionario.organizacion_si_asiste_otros_espacios_participa)
+          mixin errorMessage(cuestionario, 'organizacion_si_asiste_otros_espacios_participa')
+      .control-group
+        mixin label("organizacion_comite_mmpv", "Organizacion_comite_mmpv")        
+        .controls
+          mixin text("organizacion_comite_mmpv", cuestionario.organizacion_comite_mmpv)
+          mixin errorMessage(cuestionario, 'organizacion_comite_mmpv')
+      .control-group
+        mixin label("organizacion_grupo_tematico_mmpv", "Organizacion_grupo_tematico_mmpv")        
+        .controls
+          mixin text("organizacion_grupo_tematico_mmpv", cuestionario.organizacion_grupo_tematico_mmpv)
+          mixin errorMessage(cuestionario, 'organizacion_grupo_tematico_mmpv')
+      .control-group
+        mixin label("organizacion_si_cual_grupo_tematico_mmpv", "Organizacion_si_cual_grupo_tematico_mmpv")        
+        .controls
+          mixin text("organizacion_si_cual_grupo_tematico_mmpv", cuestionario.organizacion_si_cual_grupo_tematico_mmpv)
+          mixin errorMessage(cuestionario, 'organizacion_si_cual_grupo_tematico_mmpv')
+      .control-group
+        mixin label("organizacion_delegada_ctjt", "Organizacion_delegada_ctjt")        
+        .controls
+          mixin text("organizacion_delegada_ctjt", cuestionario.organizacion_delegada_ctjt)
+          mixin errorMessage(cuestionario, 'organizacion_delegada_ctjt')
+      .control-group
+        mixin label("organizacion_subcomite_ctjt", "Organizacion_subcomite_ctjt")        
+        .controls
+          mixin text("organizacion_subcomite_ctjt", cuestionario.organizacion_subcomite_ctjt)
+          mixin errorMessage(cuestionario, 'organizacion_subcomite_ctjt')
+      .control-group
+        mixin label("organizacion_subcomite_ctjt_cuales", "Organizacion_subcomite_ctjt_cuales")        
+        .controls
+          mixin text("organizacion_subcomite_ctjt_cuales", cuestionario.organizacion_subcomite_ctjt_cuales)
+          mixin errorMessage(cuestionario, 'organizacion_subcomite_ctjt_cuales')
+      .control-group
+        mixin label("organizacion_participa_en", "Organizacion_participa_en")        
+        .controls
+          mixin text("organizacion_participa_en", cuestionario.organizacion_participa_en)
+          mixin errorMessage(cuestionario, 'organizacion_participa_en')
+      .control-group
+        mixin label("organizacion_dificultades_efectiva_participa", "Organizacion_dificultades_efectiva_participa")        
+        .controls
+          mixin text("organizacion_dificultades_efectiva_participa", cuestionario.organizacion_dificultades_efectiva_participa)
+          mixin errorMessage(cuestionario, 'organizacion_dificultades_efectiva_participa')
+      .control-group
+        mixin label("organizacion_logra_proyectos_con_munadmon", "Organizacion_logra_proyectos_con_munadmon")        
+        .controls
+          mixin text("organizacion_logra_proyectos_con_munadmon", cuestionario.organizacion_logra_proyectos_con_munadmon)
+          mixin errorMessage(cuestionario, 'organizacion_logra_proyectos_con_munadmon')
+      .control-group
+        mixin label("organizacion_cuales_propuestas", "Organizacion_cuales_propuestas")        
+        .controls
+          mixin text("organizacion_cuales_propuestas", cuestionario.organizacion_cuales_propuestas)
+          mixin errorMessage(cuestionario, 'organizacion_cuales_propuestas')
+      .control-group
+        mixin label("organizacion_seguimiento_a_propuestas", "Organizacion_seguimiento_a_propuestas")        
+        .controls
+          mixin text("organizacion_seguimiento_a_propuestas", cuestionario.organizacion_seguimiento_a_propuestas)
+          mixin errorMessage(cuestionario, 'organizacion_seguimiento_a_propuestas')
+      .control-group
+        mixin label("organizacion_quienes_apoyan", "Organizacion_quienes_apoyan")        
+        .controls
+          mixin text("organizacion_quienes_apoyan", cuestionario.organizacion_quienes_apoyan)
+          mixin errorMessage(cuestionario, 'organizacion_quienes_apoyan')
+      .control-group
+        mixin label("organizacion_apoyo_en", "Organizacion_apoyo_en")        
+        .controls
+          mixin text("organizacion_apoyo_en", cuestionario.organizacion_apoyo_en)
+          mixin errorMessage(cuestionario, 'organizacion_apoyo_en')
+      .control-group
+        mixin label("nombre_facilitador", "Nombre_facilitador")        
+        .controls
+          mixin text("nombre_facilitador", cuestionario.nombre_facilitador)
+          mixin errorMessage(cuestionario, 'nombre_facilitador')
+      .control-group
+        mixin label("institucion_representa_facilitador", "Institucion_representa_facilitador")        
+        .controls
+          mixin text("institucion_representa_facilitador", cuestionario.institucion_representa_facilitador)
+          mixin errorMessage(cuestionario, 'institucion_representa_facilitador')
+      .control-group
+        mixin label("telefono_facilitador", "Telefono_facilitador")        
+        .controls
+          mixin text("telefono_facilitador", cuestionario.telefono_facilitador)
+          mixin errorMessage(cuestionario, 'telefono_facilitador')
+      .control-group
+        mixin label("correo_electronico", "Correo_electronico")        
+        .controls
+          mixin text("correo_electronico", cuestionario.correo_electronico)
+          mixin errorMessage(cuestionario, 'correo_electronico')
+      .control-group
+        mixin label("firma_facilitador", "Firma_facilitador")        
+        .controls
+          mixin text("firma_facilitador", cuestionario.firma_facilitador)
+          mixin errorMessage(cuestionario, 'firma_facilitador')
+      .control-group
+        mixin label("observaciones", "Observaciones")        
+        .controls
+          mixin text("observaciones", cuestionario.observaciones)
+          mixin errorMessage(cuestionario, 'observaciones')
+
+    .form-actions
+      a.btn.btn-warning(href="/cuestionarios") Back
+      | 
+      input.btn.btn-primary(type="submit", value="Save")

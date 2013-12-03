@@ -1,0 +1,21 @@
+{
+  "name": "App_CuestionarioSelect",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "3.3.x",
+    "jade": ">0.0.1",
+    "mongoose": "3.6.x",
+    "i18n-2": "0.4.x",
+    "connect-mongo": "0.3.x"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "start": "nodemon -w models -w config -w routes app.js"
+  },
+  "repository": "",
+  "private": true
+}
