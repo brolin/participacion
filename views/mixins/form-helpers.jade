@@ -24,13 +24,13 @@ mixin datetime(field, value)
 
 mixin selectMultiple(field, value, options)
   -var options= options
-  select.selectpicker.span2(id=field, name=field, value= value, multiple, data-live-search="true")
+  select.selectpicker.span2(id=field, name=field, value= value, multiple, data-live-search="true", data-container="body")
     - each opcion in options
       option #{opcion}
 
 mixin select(field, value, options)
   -var options= options
-  select.selectpicker.span2(id=field, name=field, value= value, data-live-search="true")
+  select.selectpicker.span2(id=field, name=field, value= value, data-live-search="true", data-container="body")
     - each opcion in options
       option #{opcion}
 
