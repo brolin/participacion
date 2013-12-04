@@ -2,50 +2,13 @@ extends ../layout
 include ../mixins/form-helpers
 
 block content
-  // ul.nav.nav-tabs
-  //   li#active
-  //     a(href="#1",data-toggle="tab") 1. IDENTIFICACIÓN DE LA ENCUESTA
-  //   li
-  //     a(href="#2",data-toggle="tab") 2. PERSONAS QUE RESPONDEN EL INSTRUMENTO
-  //   li
-  //     a(href="#3",data-toggle="tab") 3. INFORMACIÓN GENERAL DE LA ORGANIZACIÓN
-  //   li
-  //     a(href="#4",data-toggle="tab") 4. ESTRUCTURA DE LA ORGANIZACIÓN
-  //   li
-  //     a(href="#5",data-toggle="tab") 5. CARACTERÍSTICAS DIFERENCIALES DE LOS ASOCIADOS Y ASOCIADAS
-  //   li
-  //     a(href="#7",data-toggle="tab") 7. PLANEACIÓN Y RECURSOS
-  //   li
-  //     a(href="#8",data-toggle="tab") 8. INFORMACIÓN Y COMUNICACIÓN
-  //   li
-  //     a(href="#9",data-toggle="tab") 9. FORMACIÓN
-  //   li
-  //     a(href="#10",data-toggle="tab") 10. ACCIONES Y DERECHOS
-  //   li
-  //     a(href="#11",data-toggle="tab") 11. ESPACIOS DE PARTICIPACIÓN, ARTICULACIÓN Y ORIENTACIÓN
-  //   li
-  //     a(href="#12",data-toggle="tab") 12. DATOS DEL FACILITADOR
-
-  // #myTabContent(class="tab-content")
-  //   #1(class="tab-pane fade active in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #2(class="tab-pane fade in") 2kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #3(class="tab-pane fade in") 3kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #4(class="tab-pane fade in") 4kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #5(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #6(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #7(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #8(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #9(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #10(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #11(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
-  //   #12(class="tab-pane fade in") kaaaaaaaaajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 
   form#cuestionario-form.form-horizontal(action="/cuestionarios/create", method="POST")
     fieldset
     div.accordion#accordion2
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle(data-toggle="collapse",data-parent="#selector",href="#collapseOne") 1. IDENTIFICACIÓN DE LA ENCUESTA
+          a.accordion-toggle(data-toggle="collapse",data-parent="#accordion2",href="#collapseOne") 1. IDENTIFICACIÓN DE LA ENCUESTA
         div#collapseOne.accordion-body.collapse.in
           div.accordion-inner
             legend 1. IDENTIFICACIÓN DE LA ENCUESTA
@@ -60,14 +23,14 @@ block content
                  mixin date("fecha_aplicacion", cuestionario.fecha_aplicacion)
                  mixin errorMessage(cuestionario, 'fecha_aplicacion')
             .control-group
-               mixin label("municipio", preguntas.municipio)
+               mixin label("municipio_encuesta", preguntas.municipio_encuesta)
                .controls
-                  mixin text("municipio", cuestionario.municipio)
-                  mixin errorMessage(cuestionario, 'municipio')
+                  mixin text("municipio_encuesta", cuestionario.municipio_encuesta)
+                  mixin errorMessage(cuestionario, 'municipio_encuesta')
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseTwo") 2. PERSONAS QUE RESPONDEN EL INSTRUMENTO
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseTwo") 2. PERSONAS QUE RESPONDEN EL INSTRUMENTO
         div#collapseTwo.accordion-body.collapse
           div.accordion-inner
             legend 2. PERSONAS QUE RESPONDEN EL INSTRUMENTO
@@ -82,24 +45,24 @@ block content
                 mixin text("apellidos", cuestionario.apellidos)
                 mixin errorMessage(cuestionario, 'apellidos')
             .control-group
-              mixin label("cargo", preguntas.cargo)
+              mixin label("cargo_quien_responde", preguntas.cargo_quien_responde)
               .controls
-                mixin text("cargo", cuestionario.cargo)
-                mixin errorMessage(cuestionario, 'cargo')
+                mixin text("cargo_quien_responde", cuestionario.cargo_quien_responde)
+                mixin errorMessage(cuestionario, 'cargo_quien_responde')
             .control-group
               mixin label("telefono", preguntas.telefono)
               .controls
                 mixin text("telefono", cuestionario.telefono)
                 mixin errorMessage(cuestionario, 'telefono')
             .control-group
-              mixin label("correo_electronico", preguntas.correo_electronico)
+              mixin label("correo_electronico_quien_responde", preguntas.correo_electronico_quien_responde)
               .controls
-                mixin text("correo_electronico", cuestionario.correo_electronico)
-                mixin errorMessage(cuestionario, 'correo_electronico')
+                mixin text("correo_electronico_quien_responde", cuestionario.correo_electronico_quien_responde)
+                mixin errorMessage(cuestionario, 'correo_electronico_quien_responde')
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseThree") 3. INFORMACIÓN GENERAL DE LA ORGANIZACIÓN
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseThree") 3. INFORMACIÓN GENERAL DE LA ORGANIZACIÓN
         div#collapseThree.accordion-body.collapse
           div.accordion-inner
             legend 3. INFORMACIÓN GENERAL DE LA ORGANIZACIÓN
@@ -171,7 +134,7 @@ block content
             .control-group
               mixin label("objetivo_organizacion", preguntas.objetivo_organizacion)
               .controls
-                mixin text("objetivo_organizacion", cuestionario.objetivo_organizacion)
+                mixin textarea("objetivo_organizacion", cuestionario.objetivo_organizacion)
                 mixin errorMessage(cuestionario, 'objetivo_organizacion')
             .control-group
               mixin label("cobertura_organiza", preguntas.cobertura_organiza)
@@ -201,22 +164,22 @@ block content
             .control-group
               mixin label("requisitos_asociados", preguntas.requisitos_asociados)
               .controls
-                mixin text("requisitos_asociados", cuestionario.requisitos_asociados)
+                mixin select("requisitos_asociados", cuestionario.requisitos_asociados, opcionesRespuesta.requisitos_asociados)
                 mixin errorMessage(cuestionario, 'requisitos_asociados')
             .control-group
               mixin label("cuales_requisitos", preguntas.cuales_requisitos)
               .controls
-                mixin text("cuales_requisitos", cuestionario.cuales_requisitos)
+                mixin textarea("cuales_requisitos", cuestionario.cuales_requisitos)
                 mixin errorMessage(cuestionario, 'cuales_requisitos')
             .control-group
               mixin label("cuantos_asociados_inicios", preguntas.cuantos_asociados_inicios)
               .controls
-                mixin number("cuantos_asociados_inicios", cuestionario.cuantos_asociados_inicios)
+                mixin text("cuantos_asociados_inicios", cuestionario.cuantos_asociados_inicios)
                 mixin errorMessage(cuestionario, 'cuantos_asociados_inicios')
             .control-group
               mixin label("cuantos_asociados_actualmente", preguntas.cuantos_asociados_actualmente)
               .controls
-                mixin number("cuantos_asociados_actualmente", cuestionario.cuantos_asociados_actualmente)
+                mixin text("cuantos_asociados_actualmente", cuestionario.cuantos_asociados_actualmente)
                 mixin errorMessage(cuestionario, 'cuantos_asociados_actualmente')
             .control-group
               mixin label("motivo_aumentdismi", preguntas.motivo_aumentdismi)
@@ -226,7 +189,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseFour") 4. ESTRUCTURA DE LA ORGANIZACIÓN
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseFour") 4. ESTRUCTURA DE LA ORGANIZACIÓN
         div#collapseFour.accordion-body.collapse
           div.accordion-inner
             legend 4. ESTRUCTURA DE LA ORGANIZACIÓN
@@ -353,7 +316,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseFive") 5. CARACTERÍSTICAS DIFERENCIALES DE LOS ASOCIADOS Y ASOCIADA
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseFive") 5. CARACTERÍSTICAS DIFERENCIALES DE LOS ASOCIADOS Y ASOCIADA
         div#collapseFive.accordion-body.collapse
           div.accordion-inner
             legend 5. CARACTERÍSTICAS DIFERENCIALES DE LOS ASOCIADOS Y ASOCIADAS
@@ -390,7 +353,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseSix") 6. HECHOS VICTIMIZANTES
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseSix") 6. HECHOS VICTIMIZANTES
         div#collapseSix.accordion-body.collapse
           div.accordion-inner
             legend 6. HECHOS VICTIMIZANTES
@@ -409,6 +372,8 @@ block content
               .controls
                 mixin text("otros_cuales_hechos_victimizantes", cuestionario.otros_cuales_hechos_victimizantes)
                 mixin errorMessage(cuestionario, 'otros_cuales_hechos_victimizantes')
+            .control-group
+              mixin label("hechos_victimizantes_mas_frecuentes", preguntas.hechos_victimizantes_mas_frecuentes)
             .control-group
               mixin label("hechos_victimizantes_mas_frecuentes_1", preguntas.hechos_victimizantes_mas_frecuentes_1)
               .controls
@@ -447,7 +412,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseSeven") 7. PLANEACIÓN Y RECURSOS
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseSeven") 7. PLANEACIÓN Y RECURSOS
         div#collapseSeven.accordion-body.collapse
           div.accordion-inner
             legend 7. PLANEACIÓN Y RECURSOS
@@ -544,7 +509,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseEight") 8. INFORMACIÓN Y COMUNICACIÓN
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseEight") 8. INFORMACIÓN Y COMUNICACIÓN
         div#collapseEight.accordion-body.collapse
           div.accordion-inner
             legend 8. INFORMACIÓN Y COMUNICACIÓN
@@ -611,7 +576,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseNine") 9. FORMACIÓN
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseNine") 9. FORMACIÓN
         div#collapseNine.accordion-body.collapse
           div.accordion-inner
             legend 9. FORMACIÓN
@@ -638,7 +603,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseTen") 10. ACCIONES Y DERECHOS
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseTen") 10. ACCIONES Y DERECHOS
         div#collapseTen.accordion-body.collapse
           div.accordion-inner
           legend 10. ACCIONES Y DERECHOS
@@ -655,7 +620,7 @@ block content
           .control-group
             mixin label("organizacion_si_orienta_asociados", preguntas.organizacion_si_orienta_asociados)
             .controls
-              mixin selectMultiple("organizacion_si_orienta_asociados", cuestionario.organizacion_si_orienta_asociados, opcionesRespuesta.organizacion_si_orienta_asociados)
+              mixin select("organizacion_si_orienta_asociados", cuestionario.organizacion_si_orienta_asociados, opcionesRespuesta.organizacion_si_orienta_asociados)
               mixin errorMessage(cuestionario, 'organizacion_si_orienta_asociados')
           .control-group
             mixin label("organizacion_estrategias_derechos", preguntas.organizacion_estrategias_derechos)
@@ -705,7 +670,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseEleven") 11. ESPACIOS DE PARTICIPACIÓN, ARTICULACIÓN Y ORIENTACIÓN
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseEleven") 11. ESPACIOS DE PARTICIPACIÓN, ARTICULACIÓN Y ORIENTACIÓN
         div#collapseEleven.accordion-body.collapse
           div.accordion-inner
             legend 11. ESPACIOS DE PARTICIPACIÓN, ARTICULACIÓN Y ORIENTACIÓN
@@ -807,7 +772,7 @@ block content
 
       div.accordion-group
         div.accordion-heading
-          a.accordion-toggle( data-toggle="collapse", data-parent="#selector", href="#collapseTwelve") 12. DATOS DEL FACILITADOR
+          a.accordion-toggle( data-toggle="collapse", data-parent="#accordion2", href="#collapseTwelve") 12. DATOS DEL FACILITADOR
         div#collapseTwelve.accordion-body.collapse
           div.accordion-inner
             legend 12. DATOS DEL FACILITADOR
@@ -827,10 +792,10 @@ block content
                 mixin text("telefono_facilitador", cuestionario.telefono_facilitador)
                 mixin errorMessage(cuestionario, 'telefono_facilitador')
             .control-group
-              mixin label("correo_electronico", preguntas.correo_electronico)
+              mixin label("correo_electronico_facilitador", preguntas.correo_electronico_facilitador)
               .controls
-                mixin text("correo_electronico", cuestionario.correo_electronico)
-                mixin errorMessage(cuestionario, 'correo_electronico')
+                mixin text("correo_electronico_facilitador", cuestionario.correo_electronico_facilitador)
+                mixin errorMessage(cuestionario, 'correo_electronico_facilitador')
             .control-group
               mixin label("firma_facilitador", preguntas.firma_facilitador)
               .controls
