@@ -1,0 +1,35 @@
+extends ../../layout
+
+block content
+  h2.display-data Quienresponde Detail
+            
+  table.table.table-bordered
+    tr
+      th Property
+      th Value
+        tr
+          td Nombre
+          td= display(quienresponde.nombre)
+        tr
+          td Apellidos
+          td= display(quienresponde.apellidos)
+        tr
+          td Cargo
+          td= display(quienresponde.cargo)
+        tr
+          td Telefono
+          td= display(quienresponde.telefono)
+        tr
+          td Correo_electronico
+          td= display(quienresponde.correo_electronico)
+        tr
+          td Cuestionario_id
+          td= display(quienresponde.cuestionario_id)
+
+
+  .form-actions
+    a.btn.btn-warning(href="/cuestionario/quienrespondes") Back
+    | 
+    a.btn.btn-primary(href="/cuestionario/quienrespondes/" + quienresponde._id + "/edit") Edit
+    | 
+    a.btn.btn-danger(href="/cuestionario/quienrespondes/" + quienresponde._id + "/delete") Delete

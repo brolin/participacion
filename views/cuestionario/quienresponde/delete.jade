@@ -1,0 +1,34 @@
+extends ../../layout
+
+block content
+  h2.display-data Delete Quienresponde?
+            
+  table.table.table-bordered
+    tr
+      th Property
+      th Value
+        tr
+          td Nombre
+          td= display(quienresponde.nombre)
+        tr
+          td Apellidos
+          td= display(quienresponde.apellidos)
+        tr
+          td Cargo
+          td= display(quienresponde.cargo)
+        tr
+          td Telefono
+          td= display(quienresponde.telefono)
+        tr
+          td Correo_electronico
+          td= display(quienresponde.correo_electronico)
+        tr
+          td Cuestionario_id
+          td= display(quienresponde.cuestionario_id)
+
+
+  form#quienresponde-form.form-horizontal(action="/cuestionario/quienrespondes/" + quienresponde._id + "/delete", method="POST")
+    .form-actions
+      a.btn.btn-warning(href="/cuestionario/quienrespondes") Back
+      | 
+      input.btn.btn-danger(type="submit", value="Delete")

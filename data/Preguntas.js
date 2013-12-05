@@ -60,6 +60,7 @@ var Preguntas = {
   "conflictos_entre_integrantes": "¿Cuáles son los conflictos que más se han presentado entre los integrantes de la organización en los últimos dos años?. (Marcar con X una o varias respuestas): ",
   "otros_conflictos": "Otro: ",
   "como_tramitan_conflictos": "Estos conflictos se tramitan a través de: (Marque con X una o varias respuestas): ",
+  "otro_como_tramitan_conflictos": "Otro, ¿cuál?: ",
   "registra_diferencial": "¿La organización tiene registro de las siguientes características diferenciales de sus asociados? (Marcar con X una o varias respuestas): ",
   "otra_cual_diferencial": "Otro, ¿cuál?: ",
   "como_registra_diferencial": "Si la organización lleva registro de una o más características diferenciales de sus asociados, lo hace a través de:(Marcar con X una o varias respuestas): ",

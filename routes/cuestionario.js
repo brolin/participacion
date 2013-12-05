@@ -1,4 +1,6 @@
 var Cuestionario = require('../models/cuestionario'),
+    Quienresponde = require('../models/cuestionario/quienresponde'),
+    Cargo = require('../models/cuestionario/cargo'),
     Preguntas = require('../data/Preguntas'),
     OpcionesRespuesta = require('../data/OpcionesRespuesta'),
     mapper = require('../lib/model-mapper');
@@ -18,7 +20,11 @@ module.exports = function(app) {
 
     app.get('/cuestionarios', function(req, res) {
          Cuestionario.find({}, function(err, cuestionarios) {
-            res.render('cuestionario/index', { cuestionarios : cuestionarios });
+            res.render('cuestionario/index', {
+              cuestionarios : cuestionarios,
+              preguntas : Preguntas,
+              opcionesRespuesta : OpcionesRespuesta
+            });
         });
     });
 
@@ -75,10 +81,63 @@ module.exports = function(app) {
             res.redirect('/cuestionarios');
         });
     });
-}
+
+  // ACA RUTAS PARA SUB-DOCUMENTOS
+  // CARGOS ESTRUCTURA
+  app.post('/cuestionarios/:cuestionarioId/cargos/create', function(req, res) {
+      var cargo = new Cargo(req.body);
+
+      cargo.save(function(err) {
+        if (err) {
+          res.render('cuestionario/create', {
+            cuestionario : cuestionario,
+            preguntas : Preguntas,
+            opcionesRespuesta : OpcionesRespuesta
+          });
+        } else {
+          res.redirect('/cuestionarios');
+        }
+      });
+    });
+
+    app.get('/cuestionarios/:cuestionarioId/cargos/create', function(req, res) {
+    console.log(req.params.cuestionarioId);
+        res.render('cuestionario/cargo/create', {
+          cargo : new Cargo({cuestionario_id : req.params.cuestionarioId}) ,
+          preguntas : Preguntas,
+          opcionesRespuesta : OpcionesRespuesta
+         });
+    });
+
+  // QUIENES RESPONDEN
+    app.post('/cuestionarios/:cuestionarioId/quienrespondes/create', function(req, res) {
+      var quienresponde = new Quienresponde(req.body);
+
+      quienresponde.save(function(err) {
+        if (err) {
+          res.render('cuestionario/create', {
+            cuestionario : cuestionario,
+            preguntas : Preguntas,
+            opcionesRespuesta : OpcionesRespuesta
+          });
+        } else {
+          res.redirect('/cuestionario/quienrespondes');
+        }
+      });
+    });
+
+    app.get('/cuestionarios/:cuestionarioId/quienrespondes/create', function(req, res) {
+    console.log(req.params.cuestionarioId);
+        res.render('cuestionario/quienresponde/create', {
+          quienresponde : new Quienresponde({cuestionario_id : req.params.cuestionarioId}) ,
+          preguntas : Preguntas,
+          opcionesRespuesta : OpcionesRespuesta
+         });
+    });
+};
 
 // Used to build the index page. Can be safely removed!
 module.exports.meta = {
     name : 'Cuestionario',
     route : '/cuestionarios'
-}
+};

@@ -1,0 +1,40 @@
+extends ../../layout
+
+block content
+  h2.display-data Delete Cargo?
+            
+  table.table.table-bordered
+    tr
+      th Property
+      th Value
+        tr
+          td Cargo
+          td= display(cargo.cargo)
+        tr
+          td Directivos
+          td= display(cargo.directivos)
+        tr
+          td Genero
+          td= display(cargo.genero)
+        tr
+          td Orient_sexual
+          td= display(cargo.orient_sexual)
+        tr
+          td Edad
+          td= display(cargo.edad)
+        tr
+          td Etnia
+          td= display(cargo.etnia)
+        tr
+          td Remuneracion
+          td= display(cargo.remuneracion)
+        tr
+          td Cuestionario_id
+          td= display(cargo.cuestionario_id)
+
+
+  form#cargo-form.form-horizontal(action="/cuestionario/cargos/" + cargo._id + "/delete", method="POST")
+    .form-actions
+      a.btn.btn-warning(href="/cuestionario/cargos") Back
+      | 
+      input.btn.btn-danger(type="submit", value="Delete")

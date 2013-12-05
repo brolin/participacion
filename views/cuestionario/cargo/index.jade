@@ -1,0 +1,38 @@
+extends ../../layout
+
+block content
+  h2.display-data All Cargos
+    //a.btn.btn-primary.pull-right(href="/cuestionario/cargos/create") Create a new Cargo
+
+  table.table.table-bordered.table-striped(style="width:100%")
+    tr
+        th Cargo
+        th Directivos
+        th Genero
+        th Orient_sexual
+        th Edad
+        th Etnia
+        th Remuneracion
+        th Cuestionario_id
+        th.last
+
+    each cargo in cargos
+      tr
+        td= display(cargo.cargo)
+        td= display(cargo.directivos)
+        td= display(cargo.genero)
+        td= display(cargo.orient_sexual)
+        td= display(cargo.edad)
+        td= display(cargo.etnia)
+        td= display(cargo.remuneracion)
+        td= display(cargo.cuestionario_id)
+
+        td
+          a(href="/cuestionario/cargos/" + cargo._id + "/detail", title="Detail")
+            i.icon-zoom-in
+          |
+          a(href="/cuestionario/cargos/" + cargo._id + "/edit", title="Edit")
+            i.icon-edit
+          |
+          a(href="/cuestionario/cargos/" + cargo._id + "/delete", title="Delete")
+            i.icon-remove

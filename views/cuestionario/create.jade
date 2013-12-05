@@ -2,7 +2,7 @@ extends ../layout
 include ../mixins/form-helpers
 
 block content
-  h1=cuestionario.id
+
   form#cuestionario-form.form-horizontal(action="/cuestionarios/create", method="POST")
     fieldset
     div.accordion#accordion2
@@ -35,30 +35,35 @@ block content
           div.accordion-inner
             legend 2. PERSONAS QUE RESPONDEN EL INSTRUMENTO
             .control-group
-              mixin label("nombre", preguntas.nombre)
+              mixin label("agregar_quienes_responden", "Presione click en el botón para agregar uno a uno las personas que responden la encuenta")
               .controls
-                mixin text("nombre", cuestionario.nombre)
-                mixin errorMessage(cuestionario, 'nombre')
-            .control-group
-              mixin label("apellidos", preguntas.apellidos)
-              .controls
-                mixin text("apellidos", cuestionario.apellidos)
-                mixin errorMessage(cuestionario, 'apellidos')
-            .control-group
-              mixin label("cargo_quien_responde", preguntas.cargo_quien_responde)
-              .controls
-                mixin text("cargo_quien_responde", cuestionario.cargo_quien_responde)
-                mixin errorMessage(cuestionario, 'cargo_quien_responde')
-            .control-group
-              mixin label("telefono", preguntas.telefono)
-              .controls
-                mixin text("telefono", cuestionario.telefono)
-                mixin errorMessage(cuestionario, 'telefono')
-            .control-group
-              mixin label("correo_electronico_quien_responde", preguntas.correo_electronico_quien_responde)
-              .controls
-                mixin text("correo_electronico_quien_responde", cuestionario.correo_electronico_quien_responde)
-                mixin errorMessage(cuestionario, 'correo_electronico_quien_responde')
+                a(href="/cuestionarios/#{cuestionario.id}/quienrespondes/create", role="button",class="btn",data-toggle="modal", target="parent") Agregar persona
+                a(href="/cuestionario/#{cuestionario.id}/quienrespondes", role="button",class="btn",data-toggle="modal", style="margin-left: 5px", target="parent") Ver personas que responden encuesta
+
+            //   mixin label("nombre", preguntas.nombre)
+            //   .controls
+            //     mixin text("nombre", cuestionario.nombre)
+            //     mixin errorMessage(cuestionario, 'nombre')
+            // .control-group
+            //   mixin label("apellidos", preguntas.apellidos)
+            //   .controls
+            //     mixin text("apellidos", cuestionario.apellidos)
+            //     mixin errorMessage(cuestionario, 'apellidos')
+            // .control-group
+            //   mixin label("cargo_quien_responde", preguntas.cargo_quien_responde)
+            //   .controls
+            //     mixin text("cargo_quien_responde", cuestionario.cargo_quien_responde)
+            //     mixin errorMessage(cuestionario, 'cargo_quien_responde')
+            // .control-group
+            //   mixin label("telefono", preguntas.telefono)
+            //   .controls
+            //     mixin text("telefono", cuestionario.telefono)
+            //     mixin errorMessage(cuestionario, 'telefono')
+            // .control-group
+            //   mixin label("correo_electronico_quien_responde", preguntas.correo_electronico_quien_responde)
+            //   .controls
+            //     mixin text("correo_electronico_quien_responde", cuestionario.correo_electronico_quien_responde)
+            //     mixin errorMessage(cuestionario, 'correo_electronico_quien_responde')
 
       div.accordion-group
         div.accordion-heading
@@ -194,54 +199,15 @@ block content
           div.accordion-inner
             legend 4. ESTRUCTURA DE LA ORGANIZACIÓN
             .control-group
-              mixin label("figura_directiva", preguntas.figura_directiva)
+              mixin label("agregar_cargos", "Presione click en el botón para agregar uno a uno la estructura de la organización")
               .controls
-                mixin select("figura_directiva", cuestionario.figura_directiva, opcionesRespuesta.figura_directiva)
-                mixin errorMessage(cuestionario, 'figura_directiva')
-            .control-group
-              mixin label("cual_figu_direc", preguntas.cual_figu_direc)
-              .controls
-                mixin text("cual_figu_direc", cuestionario.cual_figu_direc)
-                mixin errorMessage(cuestionario, 'cual_figu_direc')
-            .control-group
-              mixin label("cargo", preguntas.cargo)
-              .controls
-                mixin text("cargo", cuestionario.cargo)
-                mixin errorMessage(cuestionario, 'cargo')
-            .control-group
-              mixin label("directivos", preguntas.directivos)
-              .controls
-                mixin select("directivos", cuestionario.directivos, opcionesRespuesta.directivos)
-                mixin errorMessage(cuestionario, 'directivos')
-            .control-group
-              mixin label("genero", preguntas.genero)
-              .controls
-                mixin select("genero", cuestionario.genero, opcionesRespuesta.genero)
-                mixin errorMessage(cuestionario, 'genero')
-            .control-group
-              mixin label("orient_sexual", preguntas.orient_sexual)
-              .controls
-                mixin select("orient_sexual", cuestionario.orient_sexual,opcionesRespuesta.orient_sexual)
-                mixin errorMessage(cuestionario, 'orient_sexual')
-            .control-group
-              mixin label("edad", preguntas.edad)
-              .controls
-                mixin text("edad", cuestionario.edad)
-                mixin errorMessage(cuestionario, 'edad')
-            .control-group
-              mixin label("etnia", preguntas.etnia)
-              .controls
-                mixin text("etnia", cuestionario.etnia)
-                mixin errorMessage(cuestionario, 'etnia')
-            .control-group
-              mixin label("remuneracion", preguntas.remuneracion)
-              .controls
-                mixin select("remuneracion", cuestionario.remuneracion, opcionesRespuesta.remuneracion)
-                mixin errorMessage(cuestionario, 'remuneracion')
+                a(href="/cuestionarios/#{cuestionario.id}/cargos/create", role="button",class="btn",data-toggle="modal", target="parent") Agregar estructura
+                a(href="/cuestionario/#{cuestionario.id}/cargos/", role="button",class="btn",data-toggle="modal", style="margin-left: 5px", target="parent") Ver estructura
+
             .control-group
               mixin label("como_elige_directivos", preguntas.como_elige_directivos)
               .controls
-                mixin text("como_elige_directivos", cuestionario.como_elige_directivos)
+                mixin textarea("como_elige_directivos", cuestionario.como_elige_directivos)
                 mixin errorMessage(cuestionario, 'como_elige_directivos')
             .control-group
               mixin label("comite_grupo_mesas", preguntas.comite_grupo_mesas)

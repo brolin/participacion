@@ -1,0 +1,53 @@
+extends ../../layout
+include ../../mixins/form-helpers
+
+block content
+  form#cargo-form.form-horizontal(action="/cuestionario/cargos/" + cargo._id + "/edit", method="POST")
+    fieldset
+      legend Edit Cargo
+
+      .control-group
+        mixin label("cargo", "Cargo")        
+        .controls
+          mixin text("cargo", cargo.cargo)
+          mixin errorMessage(cargo, 'cargo')
+      .control-group
+        mixin label("directivos", "Directivos")        
+        .controls
+          mixin text("directivos", cargo.directivos)
+          mixin errorMessage(cargo, 'directivos')
+      .control-group
+        mixin label("genero", "Genero")        
+        .controls
+          mixin text("genero", cargo.genero)
+          mixin errorMessage(cargo, 'genero')
+      .control-group
+        mixin label("orient_sexual", "Orient_sexual")        
+        .controls
+          mixin text("orient_sexual", cargo.orient_sexual)
+          mixin errorMessage(cargo, 'orient_sexual')
+      .control-group
+        mixin label("edad", "Edad")        
+        .controls
+          mixin text("edad", cargo.edad)
+          mixin errorMessage(cargo, 'edad')
+      .control-group
+        mixin label("etnia", "Etnia")        
+        .controls
+          mixin text("etnia", cargo.etnia)
+          mixin errorMessage(cargo, 'etnia')
+      .control-group
+        mixin label("remuneracion", "Remuneracion")        
+        .controls
+          mixin text("remuneracion", cargo.remuneracion)
+          mixin errorMessage(cargo, 'remuneracion')
+      .control-group
+        mixin label("cuestionario_id", "Cuestionario_id")        
+        .controls
+          mixin text("cuestionario_id", cargo.cuestionario_id)
+          mixin errorMessage(cargo, 'cuestionario_id')
+
+    .form-actions
+      a.btn.btn-warning(href="/cuestionario/cargos") Back
+      | 
+      input.btn.btn-primary(type="submit", value="Save")

@@ -1,0 +1,43 @@
+extends ../../layout
+include ../../mixins/form-helpers
+
+block content
+  form#quienresponde-form.form-horizontal(action="/cuestionario/quienrespondes/" + quienresponde._id + "/edit", method="POST")
+    fieldset
+      legend Edit Quienresponde
+
+      .control-group
+        mixin label("nombre", "Nombre")        
+        .controls
+          mixin text("nombre", quienresponde.nombre)
+          mixin errorMessage(quienresponde, 'nombre')
+      .control-group
+        mixin label("apellidos", "Apellidos")        
+        .controls
+          mixin text("apellidos", quienresponde.apellidos)
+          mixin errorMessage(quienresponde, 'apellidos')
+      .control-group
+        mixin label("cargo", "Cargo")        
+        .controls
+          mixin text("cargo", quienresponde.cargo)
+          mixin errorMessage(quienresponde, 'cargo')
+      .control-group
+        mixin label("telefono", "Telefono")        
+        .controls
+          mixin text("telefono", quienresponde.telefono)
+          mixin errorMessage(quienresponde, 'telefono')
+      .control-group
+        mixin label("correo_electronico", "Correo_electronico")        
+        .controls
+          mixin text("correo_electronico", quienresponde.correo_electronico)
+          mixin errorMessage(quienresponde, 'correo_electronico')
+      .control-group
+        mixin label("cuestionario_id", "Cuestionario_id")        
+        .controls
+          mixin text("cuestionario_id", quienresponde.cuestionario_id)
+          mixin errorMessage(quienresponde, 'cuestionario_id')
+
+    .form-actions
+      a.btn.btn-warning(href="/cuestionario/quienrespondes") Back
+      | 
+      input.btn.btn-primary(type="submit", value="Save")
