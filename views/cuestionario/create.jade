@@ -2,7 +2,7 @@ extends ../layout
 include ../mixins/form-helpers
 
 block content
-
+  h1=cuestionario.id
   form#cuestionario-form.form-horizontal(action="/cuestionarios/create", method="POST")
     fieldset
     div.accordion#accordion2
@@ -806,6 +806,10 @@ block content
               .controls
                 mixin textarea("observaciones", cuestionario.observaciones)
                 mixin errorMessage(cuestionario, 'observaciones')
+            .control-group(style="display:none")
+              .controls
+                mixin text("_id", cuestionario.id)
+                mixin errorMessage(cuestionario, '_id')
 
     .form-actions
       a.btn.btn-warning(href="/cuestionarios") Back

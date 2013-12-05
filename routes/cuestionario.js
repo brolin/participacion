@@ -31,19 +31,19 @@ module.exports = function(app) {
     });
 
     app.post('/cuestionarios/create', function(req, res) {
-        var cuestionario = new Cuestionario(req.body);
+      var cuestionario = new Cuestionario(req.body);
 
-        cuestionario.save(function(err) {
-            if (err) {
-                res.render('cuestionario/create', {
-                  cuestionario : cuestionario,
-                  preguntas : Preguntas,
-                  opcionesRespuesta : OpcionesRespuesta
-                });
-            } else {
-                res.redirect('/cuestionarios');
-            }
-        });
+      cuestionario.save(function(err) {
+        if (err) {
+          res.render('cuestionario/create', {
+            cuestionario : cuestionario,
+            preguntas : Preguntas,
+            opcionesRespuesta : OpcionesRespuesta
+          });
+        } else {
+          res.redirect('/cuestionarios');
+        }
+      });
     });
 
     app.get('/cuestionarios/:cuestionarioId/edit', function(req, res) {
