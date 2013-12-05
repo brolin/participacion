@@ -1,446 +1,447 @@
 extends ../layout
 
 block content
+  //p=JSON.stringify(preguntas)
   h2.display-data Cuestionario Detail
-            
+
   table.table.table-bordered
     tr
       th Property
       th Value
         tr
-          td Codigo
+          td #{preguntas.codigo}
           td= display(cuestionario.codigo)
         tr
-          td Fecha_aplicacion
+          td #{preguntas.fecha_aplicacion}
           td= display(cuestionario.fecha_aplicacion)
         tr
-          td Municipio
-          td= display(cuestionario.municipio)
+          td #{preguntas.municipio}
+          td= display(cuestionario.municipio_encuesta)
         tr
-          td Nombre
+          td #{preguntas.nombre}
           td= display(cuestionario.nombre)
         tr
-          td Apellidos
+          td #{preguntas.apellidos}
           td= display(cuestionario.apellidos)
         tr
-          td Cargo
+          td #{preguntas.cargo}
           td= display(cuestionario.cargo)
         tr
-          td Telefono
+          td #{preguntas.telefono}
           td= display(cuestionario.telefono)
         tr
-          td Correo_electronico
+          td #{preguntas.correo_electronico}
           td= display(cuestionario.correo_electronico)
         tr
-          td Nombre_organizacion
+          td #{preguntas.nombre_organizacion}
           td= display(cuestionario.nombre_organizacion)
         tr
-          td Sigla_organizacion
+          td #{preguntas.sigla_organizacion}
           td= display(cuestionario.sigla_organizacion)
         tr
-          td Direccion_organizacion
+          td #{preguntas.direccion_organizacion}
           td= display(cuestionario.direccion_organizacion)
         tr
-          td Municipio
+          td #{preguntas.municipio}
           td= display(cuestionario.municipio)
         tr
-          td Comuna
+          td #{preguntas.comuna}
           td= display(cuestionario.comuna)
         tr
-          td Corregimiento
+          td #{preguntas.corregimiento}
           td= display(cuestionario.corregimiento)
         tr
-          td Vereda
+          td #{preguntas.vereda}
           td= display(cuestionario.vereda)
         tr
-          td Barrio
+          td #{preguntas.barrio}
           td= display(cuestionario.barrio)
         tr
-          td Telefono_fijo
+          td #{preguntas.telefono_fijo}
           td= display(cuestionario.telefono_fijo)
         tr
-          td Celular
+          td #{preguntas.celular}
           td= display(cuestionario.celular)
         tr
-          td Correo_electronico
+          td #{preguntas.correo_electronico}
           td= display(cuestionario.correo_electronico)
         tr
-          td Tipo_organizacion
+          td #{preguntas.tipo_organizacion}
           td= display(cuestionario.tipo_organizacion)
         tr
-          td Otra_cual_tipo_organizacion
+          td #{preguntas.otra_cual_tipo_organizacion}
           td= display(cuestionario.otra_cual_tipo_organizacion)
         tr
-          td Objetivo_organizacion
+          td #{preguntas.objetivo_organizacion}
           td= display(cuestionario.objetivo_organizacion)
         tr
-          td Cobertura_organiza
+          td #{preguntas.cobertura_organiza}
           td= display(cuestionario.cobertura_organiza)
         tr
-          td Motivo_constitucion
+          td #{preguntas.motivo_constitucion}
           td= display(cuestionario.motivo_constitucion)
         tr
-          td Fecha_constitucion
+          td #{preguntas.fecha_constitucion}
           td= display(cuestionario.fecha_constitucion)
         tr
-          td Perso_juridica
+          td #{preguntas.perso_juridica}
           td= display(cuestionario.perso_juridica)
         tr
-          td Num_personeria
+          td #{preguntas.num_personeria}
           td= display(cuestionario.num_personeria)
         tr
-          td Requisitos_asociados
+          td #{preguntas.requisitos_asociados}
           td= display(cuestionario.requisitos_asociados)
         tr
-          td Cuales_requisitos
+          td #{preguntas.cuales_requisitos}
           td= display(cuestionario.cuales_requisitos)
         tr
-          td Cuantos_asociados_inicios
+          td #{preguntas.cuantos_asociados_inicios}
           td= display(cuestionario.cuantos_asociados_inicios)
         tr
-          td Cuantos_asociados_actualmente
+          td #{preguntas.cuantos_asociados_actualmente}
           td= display(cuestionario.cuantos_asociados_actualmente)
         tr
-          td Motivo_aumentdismi
+          td #{preguntas.motivo_aumentdismi}
           td= display(cuestionario.motivo_aumentdismi)
         tr
-          td Figura_directiva
+          td #{preguntas.figura_directiva}
           td= display(cuestionario.figura_directiva)
         tr
-          td Cual_figu_direc
+          td #{preguntas.cual_figu_direc}
           td= display(cuestionario.cual_figu_direc)
         tr
-          td Cargo
+          td #{preguntas.cargo}
           td= display(cuestionario.cargo)
         tr
-          td Directivos
+          td #{preguntas.directivos}
           td= display(cuestionario.directivos)
         tr
-          td Genero
+          td #{preguntas.genero}
           td= display(cuestionario.genero)
         tr
-          td Orient_sexual
+          td #{preguntas.orient_sexual}
           td= display(cuestionario.orient_sexual)
         tr
-          td Edad
+          td #{preguntas.edad}
           td= display(cuestionario.edad)
         tr
-          td Etnia
+          td #{preguntas.etnia}
           td= display(cuestionario.etnia)
         tr
-          td Remuneracion
+          td #{preguntas.remuneracion}
           td= display(cuestionario.remuneracion)
         tr
-          td Como_elige_directivos
+          td #{preguntas.como_elige_directivos}
           td= display(cuestionario.como_elige_directivos)
         tr
-          td Comite_grupo_mesas
+          td #{preguntas.comite_grupo_mesas}
           td= display(cuestionario.comite_grupo_mesas)
         tr
-          td Tipo_de_comites
+          td #{preguntas.tipo_de_comites}
           td= display(cuestionario.tipo_de_comites)
         tr
-          td Otros_cual_comite
+          td #{preguntas.otros_cual_comite}
           td= display(cuestionario.otros_cual_comite)
         tr
-          td Frecuen_figudirectiva
+          td #{preguntas.frecuen_figudirectiva}
           td= display(cuestionario.frecuen_figudirectiva)
         tr
-          td Otra_frecuenc
+          td #{preguntas.otra_frecuenc}
           td= display(cuestionario.otra_frecuenc)
         tr
-          td Frecuencia_reune_directivos_socios
+          td #{preguntas.frecuencia_reune_directivos_socios}
           td= display(cuestionario.frecuencia_reune_directivos_socios)
         tr
-          td Mecanismo_decision
+          td #{preguntas.mecanismo_decision}
           td= display(cuestionario.mecanismo_decision)
         tr
-          td Otro_cual_mecanism
+          td #{preguntas.otro_cual_mecanism}
           td= display(cuestionario.otro_cual_mecanism)
         tr
-          td Quien_decide
+          td #{preguntas.quien_decide}
           td= display(cuestionario.quien_decide)
         tr
-          td Otro_cual_quien_decide
+          td #{preguntas.otro_cual_quien_decide}
           td= display(cuestionario.otro_cual_quien_decide)
         tr
-          td Conflictos_entre_integrantes
+          td #{preguntas.conflictos_entre_integrantes}
           td= display(cuestionario.conflictos_entre_integrantes)
         tr
-          td Otros_conflictos
+          td #{preguntas.otros_conflictos}
           td= display(cuestionario.otros_conflictos)
         tr
-          td Como_tramitan_conflictos
+          td #{preguntas.como_tramitan_conflictos}
           td= display(cuestionario.como_tramitan_conflictos)
         tr
-          td Otro_como_tramitan_conflictos
+          td #{preguntas.otro_como_tramitan_conflictos}
           td= display(cuestionario.otro_como_tramitan_conflictos)
         tr
-          td Registra_diferencial
+          td #{preguntas.registra_diferencial}
           td= display(cuestionario.registra_diferencial)
         tr
-          td Otra_cual_diferencial
+          td #{preguntas.otra_cual_diferencial}
           td= display(cuestionario.otra_cual_diferencial)
         tr
-          td Como_registra_diferencial
+          td #{preguntas.como_registra_diferencial}
           td= display(cuestionario.como_registra_diferencial)
         tr
-          td Otra_como_registra_diferencial
+          td #{preguntas.otra_como_registra_diferencial}
           td= display(cuestionario.otra_como_registra_diferencial)
         tr
-          td Enfoque_grupos
+          td #{preguntas.enfoque_grupos}
           td= display(cuestionario.enfoque_grupos)
         tr
-          td Otro_cual_enfoque
+          td #{preguntas.otro_cual_enfoque}
           td= display(cuestionario.otro_cual_enfoque)
         tr
-          td Asociados_no_victimas
+          td #{preguntas.asociados_no_victimas}
           td= display(cuestionario.asociados_no_victimas)
         tr
-          td Hechos_victimizantes_asociados
+          td #{preguntas.hechos_victimizantes_asociados}
           td= display(cuestionario.hechos_victimizantes_asociados)
         tr
-          td Otros_cuales_hechos_victimizantes
+          td #{preguntas.otros_cuales_hechos_victimizantes}
           td= display(cuestionario.otros_cuales_hechos_victimizantes)
         tr
-          td Hechos_victimizantes_mas_frecuentes_1
+          td #{preguntas.hechos_victimizantes_mas_frecuentes_1}
           td= display(cuestionario.hechos_victimizantes_mas_frecuentes_1)
         tr
-          td Hechos_victimizantes_mas_frecuentes_2
+          td #{preguntas.hechos_victimizantes_mas_frecuentes_2}
           td= display(cuestionario.hechos_victimizantes_mas_frecuentes_2)
         tr
-          td Hechos_victimizantes_mas_frecuentes_3
+          td #{preguntas.hechos_victimizantes_mas_frecuentes_3}
           td= display(cuestionario.hechos_victimizantes_mas_frecuentes_3)
         tr
-          td Hechos_victimizantes_mas_frecuentes_4
+          td #{preguntas.hechos_victimizantes_mas_frecuentes_4}
           td= display(cuestionario.hechos_victimizantes_mas_frecuentes_4)
         tr
-          td Trabajo_por_hvespecifico
+          td #{preguntas.trabajo_por_hvespecifico}
           td= display(cuestionario.trabajo_por_hvespecifico)
         tr
-          td Tipos_victimiz_trabajo_por
+          td #{preguntas.tipos_victimiz_trabajo_por}
           td= display(cuestionario.tipos_victimiz_trabajo_por)
         tr
-          td Otro_tipos_victimiz_trabajo_por
+          td #{preguntas.otro_tipos_victimiz_trabajo_por}
           td= display(cuestionario.otro_tipos_victimiz_trabajo_por)
         tr
-          td Org_cuenta_con
+          td #{preguntas.org_cuenta_con}
           td= display(cuestionario.org_cuenta_con)
         tr
-          td Bienes
+          td #{preguntas.bienes}
           td= display(cuestionario.bienes)
         tr
-          td Lugar_fisico
+          td #{preguntas.lugar_fisico}
           td= display(cuestionario.lugar_fisico)
         tr
-          td Relacion_lugar
+          td #{preguntas.relacion_lugar}
           td= display(cuestionario.relacion_lugar)
         tr
-          td Quien_financia
+          td #{preguntas.quien_financia}
           td= display(cuestionario.quien_financia)
         tr
-          td Forma_financia
+          td #{preguntas.forma_financia}
           td= display(cuestionario.forma_financia)
         tr
-          td Otra_financia
+          td #{preguntas.otra_financia}
           td= display(cuestionario.otra_financia)
         tr
-          td Recursos_propios_como
+          td #{preguntas.recursos_propios_como}
           td= display(cuestionario.recursos_propios_como)
         tr
-          td Otros_recursos_propios
+          td #{preguntas.otros_recursos_propios}
           td= display(cuestionario.otros_recursos_propios)
         tr
-          td Tiene_recursos_funcionamiento
+          td #{preguntas.tiene_recursos_funcionamiento}
           td= display(cuestionario.tiene_recursos_funcionamiento)
         tr
-          td Cuanto_dinero_2013
+          td #{preguntas.cuanto_dinero_2013}
           td= display(cuestionario.cuanto_dinero_2013)
         tr
-          td Cuanto_dinero_mas
+          td #{preguntas.cuanto_dinero_mas}
           td= display(cuestionario.cuanto_dinero_mas)
         tr
-          td Dineros_proyectos_2013
+          td #{preguntas.dineros_proyectos_2013}
           td= display(cuestionario.dineros_proyectos_2013)
         tr
-          td Cuanto_dinero_admin_2013
+          td #{preguntas.cuanto_dinero_admin_2013}
           td= display(cuestionario.cuanto_dinero_admin_2013)
         tr
-          td Cuanto_dinero_mas_proyecto_2013
+          td #{preguntas.cuanto_dinero_mas_proyecto_2013}
           td= display(cuestionario.cuanto_dinero_mas_proyecto_2013)
         tr
-          td Funcion_interno
+          td #{preguntas.funcion_interno}
           td= display(cuestionario.funcion_interno)
         tr
-          td Planeacion_ejecucion
+          td #{preguntas.planeacion_ejecucion}
           td= display(cuestionario.planeacion_ejecucion)
         tr
-          td Otro_destino_recursos_planeacion
+          td #{preguntas.otro_destino_recursos_planeacion}
           td= display(cuestionario.otro_destino_recursos_planeacion)
         tr
-          td Cuales_medios_comunicacion
+          td #{preguntas.cuales_medios_comunicacion}
           td= display(cuestionario.cuales_medios_comunicacion)
         tr
-          td Otro_medios_comunicacion
+          td #{preguntas.otro_medios_comunicacion}
           td= display(cuestionario.otro_medios_comunicacion)
         tr
-          td Rendicion_cuentas
+          td #{preguntas.rendicion_cuentas}
           td= display(cuestionario.rendicion_cuentas)
         tr
-          td Forma_rendicion_cuentas
+          td #{preguntas.forma_rendicion_cuentas}
           td= display(cuestionario.forma_rendicion_cuentas)
         tr
-          td Frecuencia_rendicion_cuentas
+          td #{preguntas.frecuencia_rendicion_cuentas}
           td= display(cuestionario.frecuencia_rendicion_cuentas)
         tr
-          td Otra_frecuencia_rendicion_cuentas
+          td #{preguntas.otra_frecuencia_rendicion_cuentas}
           td= display(cuestionario.otra_frecuencia_rendicion_cuentas)
         tr
-          td Medios_utiliza_comunicacion_interna
+          td #{preguntas.medios_utiliza_comunicacion_interna}
           td= display(cuestionario.medios_utiliza_comunicacion_interna)
         tr
-          td Otros_medios_comunicacion_interna
+          td #{preguntas.otros_medios_comunicacion_interna}
           td= display(cuestionario.otros_medios_comunicacion_interna)
         tr
-          td Medios_difusion_externos
+          td #{preguntas.medios_difusion_externos}
           td= display(cuestionario.medios_difusion_externos)
         tr
-          td Otro_medios_difusion_externos
+          td #{preguntas.otro_medios_difusion_externos}
           td= display(cuestionario.otro_medios_difusion_externos)
         tr
-          td Mecanismos_recepcion_informacion
+          td #{preguntas.mecanismos_recepcion_informacion}
           td= display(cuestionario.mecanismos_recepcion_informacion)
         tr
-          td Otros_mecanismos_recepcion_informacion
+          td #{preguntas.otros_mecanismos_recepcion_informacion}
           td= display(cuestionario.otros_mecanismos_recepcion_informacion)
         tr
-          td Han_recibido_formacion
+          td #{preguntas.han_recibido_formacion}
           td= display(cuestionario.han_recibido_formacion)
         tr
-          td Otra_formacion
+          td #{preguntas.otra_formacion}
           td= display(cuestionario.otra_formacion)
         tr
-          td Se_socializa_conocimiento
+          td #{preguntas.se_socializa_conocimiento}
           td= display(cuestionario.se_socializa_conocimiento)
         tr
-          td Replica_formacion_a_organizaciones_victimas_cercanas
+          td #{preguntas.replica_formacion_a_organizaciones_victimas_cercanas}
           td= display(cuestionario.replica_formacion_a_organizaciones_victimas_cercanas)
         tr
-          td Derechos_organizacion_trabaja
+          td #{preguntas.derechos_organizacion_trabaja}
           td= display(cuestionario.derechos_organizacion_trabaja)
         tr
-          td Organizacion_orienta_asociados
+          td #{preguntas.organizacion_orienta_asociados}
           td= display(cuestionario.organizacion_orienta_asociados)
         tr
-          td Organizacion_si_orienta_asociados
+          td #{preguntas.organizacion_si_orienta_asociados}
           td= display(cuestionario.organizacion_si_orienta_asociados)
         tr
-          td Organizacion_estrategias_derechos
+          td #{preguntas.organizacion_estrategias_derechos}
           td= display(cuestionario.organizacion_estrategias_derechos)
         tr
-          td Organizacion_circula_informacion
+          td #{preguntas.organizacion_circula_informacion}
           td= display(cuestionario.organizacion_circula_informacion)
         tr
-          td Organizacion_si_circula_informacion
+          td #{preguntas.organizacion_si_circula_informacion}
           td= display(cuestionario.organizacion_si_circula_informacion)
         tr
-          td Otro_organizacion_si_circula_informacion
+          td #{preguntas.otro_organizacion_si_circula_informacion}
           td= display(cuestionario.otro_organizacion_si_circula_informacion)
         tr
-          td Organizacion_orienta_ante_estado
+          td #{preguntas.organizacion_orienta_ante_estado}
           td= display(cuestionario.organizacion_orienta_ante_estado)
         tr
-          td Organizacion_si_orienta_ante_estado
+          td #{preguntas.organizacion_si_orienta_ante_estado}
           td= display(cuestionario.organizacion_si_orienta_ante_estado)
         tr
-          td Organizacion_orienta_fiscalia
+          td #{preguntas.organizacion_orienta_fiscalia}
           td= display(cuestionario.organizacion_orienta_fiscalia)
         tr
-          td Organizacion_orienta_ley1448
+          td #{preguntas.organizacion_orienta_ley1448}
           td= display(cuestionario.organizacion_orienta_ley1448)
         tr
-          td Organizacion_orienta_despojo
+          td #{preguntas.organizacion_orienta_despojo}
           td= display(cuestionario.organizacion_orienta_despojo)
         tr
-          td Organizacion_inscrita_otras_orga
+          td #{preguntas.organizacion_inscrita_otras_orga}
           td= display(cuestionario.organizacion_inscrita_otras_orga)
         tr
-          td Organizacion_si_inscrita_otras_orga
+          td #{preguntas.organizacion_si_inscrita_otras_orga}
           td= display(cuestionario.organizacion_si_inscrita_otras_orga)
         tr
-          td Organizacion_participa_otras_orga
+          td #{preguntas.organizacion_participa_otras_orga}
           td= display(cuestionario.organizacion_participa_otras_orga)
         tr
-          td Organizacion_motivacion_otras_orga
+          td #{preguntas.organizacion_motivacion_otras_orga}
           td= display(cuestionario.organizacion_motivacion_otras_orga)
         tr
-          td Organizacion_asiste_otros_espacios_participa
+          td #{preguntas.organizacion_asiste_otros_espacios_participa}
           td= display(cuestionario.organizacion_asiste_otros_espacios_participa)
         tr
-          td Organizacion_si_asiste_otros_espacios_participa
+          td #{preguntas.organizacion_si_asiste_otros_espacios_participa}
           td= display(cuestionario.organizacion_si_asiste_otros_espacios_participa)
         tr
-          td Organizacion_comite_mmpv
+          td #{preguntas.organizacion_comite_mmpv}
           td= display(cuestionario.organizacion_comite_mmpv)
         tr
-          td Organizacion_grupo_tematico_mmpv
+          td #{preguntas.organizacion_grupo_tematico_mmpv}
           td= display(cuestionario.organizacion_grupo_tematico_mmpv)
         tr
-          td Organizacion_si_cual_grupo_tematico_mmpv
+          td #{preguntas.organizacion_si_cual_grupo_tematico_mmpv}
           td= display(cuestionario.organizacion_si_cual_grupo_tematico_mmpv)
         tr
-          td Organizacion_delegada_ctjt
+          td #{preguntas.organizacion_delegada_ctjt}
           td= display(cuestionario.organizacion_delegada_ctjt)
         tr
-          td Organizacion_subcomite_ctjt
+          td #{preguntas.organizacion_subcomite_ctjt}
           td= display(cuestionario.organizacion_subcomite_ctjt)
         tr
-          td Organizacion_subcomite_ctjt_cuales
+          td #{preguntas.organizacion_subcomite_ctjt_cuales}
           td= display(cuestionario.organizacion_subcomite_ctjt_cuales)
         tr
-          td Organizacion_participa_en
+          td #{preguntas.organizacion_participa_en}
           td= display(cuestionario.organizacion_participa_en)
         tr
-          td Organizacion_dificultades_efectiva_participa
+          td #{preguntas.organizacion_dificultades_efectiva_participa}
           td= display(cuestionario.organizacion_dificultades_efectiva_participa)
         tr
-          td Organizacion_logra_proyectos_con_munadmon
+          td #{preguntas.organizacion_logra_proyectos_con_munadmon}
           td= display(cuestionario.organizacion_logra_proyectos_con_munadmon)
         tr
-          td Organizacion_cuales_propuestas
+          td #{preguntas.organizacion_cuales_propuestas}
           td= display(cuestionario.organizacion_cuales_propuestas)
         tr
-          td Organizacion_seguimiento_a_propuestas
+          td #{preguntas.organizacion_seguimiento_a_propuestas}
           td= display(cuestionario.organizacion_seguimiento_a_propuestas)
         tr
-          td Organizacion_quienes_apoyan
+          td #{preguntas.organizacion_quienes_apoyan}
           td= display(cuestionario.organizacion_quienes_apoyan)
         tr
-          td Organizacion_apoyo_en
+          td #{preguntas.organizacion_apoyo_en}
           td= display(cuestionario.organizacion_apoyo_en)
         tr
-          td Nombre_facilitador
+          td #{preguntas.nombre_facilitador}
           td= display(cuestionario.nombre_facilitador)
         tr
-          td Institucion_representa_facilitador
+          td #{preguntas.institucion_representa_facilitador}
           td= display(cuestionario.institucion_representa_facilitador)
         tr
-          td Telefono_facilitador
+          td #{preguntas.telefono_facilitador}
           td= display(cuestionario.telefono_facilitador)
         tr
-          td Correo_electronico
+          td #{preguntas.correo_electronico}
           td= display(cuestionario.correo_electronico)
         tr
-          td Firma_facilitador
+          td #{preguntas.firma_facilitador}
           td= display(cuestionario.firma_facilitador)
         tr
-          td Observaciones
+          td #{preguntas.observaciones}
           td= display(cuestionario.observaciones)
 
 
   .form-actions
     a.btn.btn-warning(href="/cuestionarios") Back
-    | 
+    |
     a.btn.btn-primary(href="/cuestionarios/" + cuestionario._id + "/edit") Edit
-    | 
+    |
     a.btn.btn-danger(href="/cuestionarios/" + cuestionario._id + "/delete") Delete

@@ -53,7 +53,10 @@ module.exports = function(app) {
     });
 
     app.get('/cuestionarios/:cuestionarioId/edit', function(req, res) {
-        res.render('cuestionario/edit');
+        res.render('cuestionario/edit', {
+          preguntas : Preguntas,
+          opcionesRespuesta :OpcionesRespuesta
+          });
     });
 
     app.post('/cuestionarios/:cuestionarioId/edit', function(req, res) {
@@ -69,11 +72,11 @@ module.exports = function(app) {
     });
 
     app.get('/cuestionarios/:cuestionarioId/detail', function(req, res) {
-        res.render('cuestionario/detail');
+        res.render('cuestionario/detail', { preguntas : Preguntas });
     });
 
     app.get('/cuestionarios/:cuestionarioId/delete', function(req, res) {
-        res.render('cuestionario/delete');
+        res.render('cuestionario/delete', { preguntas : Preguntas });
     });
 
     app.post('/cuestionarios/:cuestionarioId/delete', function(req, res) {

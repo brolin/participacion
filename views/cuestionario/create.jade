@@ -643,7 +643,7 @@ block content
             .control-group
               mixin label("organizacion_inscrita_otras_orga", preguntas.organizacion_inscrita_otras_orga)
               .controls
-                mixin selectMultiple("organizacion_inscrita_otras_orga", cuestionario.organizacion_inscrita_otras_orga, opcionesRespuesta.organizacion_inscrita_otras_orga)
+                mixin select("organizacion_inscrita_otras_orga", cuestionario.organizacion_inscrita_otras_orga, opcionesRespuesta.organizacion_inscrita_otras_orga)
                 mixin errorMessage(cuestionario, 'organizacion_inscrita_otras_orga')
             .control-group
               mixin label("organizacion_si_inscrita_otras_orga", preguntas.organizacion_si_inscrita_otras_orga)
