@@ -24,7 +24,7 @@ block content
             .control-group
                mixin label("municipio_encuesta", preguntas.municipio_encuesta)
                .controls
-                  mixin text("municipio_encuesta", cuestionario.municipio_encuesta)
+                  mixin select("municipio_encuesta", cuestionario.municipio_encuesta, opcionesRespuesta.municipio_encuesta)
                   mixin errorMessage(cuestionario, 'municipio_encuesta')
 
       div.accordion-group
@@ -88,7 +88,7 @@ block content
             .control-group
               mixin label("municipio", preguntas.municipio)
               .controls
-                mixin text("municipio", cuestionario.municipio)
+                mixin select("municipio", cuestionario.municipio, opcionesRespuesta.municipio)
                 mixin errorMessage(cuestionario, 'municipio')
             .control-group
               mixin label("comuna", preguntas.comuna)
