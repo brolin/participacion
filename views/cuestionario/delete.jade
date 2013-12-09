@@ -1,12 +1,12 @@
 extends ../layout
 
 block content
-  h2.display-data Delete Cuestionario?
+  h2.display-data Borrar Cuestionario?
 
   table.table.table-bordered
     tr
-      th Property
-      th Value
+      th Pregunta
+      th Respuesta
         tr
           td #{preguntas.codigo}
           td= display(cuestionario.codigo)
@@ -14,23 +14,8 @@ block content
           td #{preguntas.fecha_aplicacion}
           td= display(cuestionario.fecha_aplicacion)
         tr
-          td #{preguntas.municipio}
+          td #{preguntas.municipio_encuesta}
           td= display(cuestionario.municipio_encuesta)
-        tr
-          td #{preguntas.nombre}
-          td= display(cuestionario.nombre)
-        tr
-          td #{preguntas.apellidos}
-          td= display(cuestionario.apellidos)
-        tr
-          td #{preguntas.cargo}
-          td= display(cuestionario.cargo)
-        tr
-          td #{preguntas.telefono}
-          td= display(cuestionario.telefono)
-        tr
-          td #{preguntas.correo_electronico}
-          td= display(cuestionario.correo_electronico)
         tr
           td #{preguntas.nombre_organizacion}
           td= display(cuestionario.nombre_organizacion)
@@ -110,27 +95,6 @@ block content
           td #{preguntas.cual_figu_direc}
           td= display(cuestionario.cual_figu_direc)
         tr
-          td #{preguntas.cargo}
-          td= display(cuestionario.cargo)
-        tr
-          td #{preguntas.directivos}
-          td= display(cuestionario.directivos)
-        tr
-          td #{preguntas.genero}
-          td= display(cuestionario.genero)
-        tr
-          td #{preguntas.orient_sexual}
-          td= display(cuestionario.orient_sexual)
-        tr
-          td #{preguntas.edad}
-          td= display(cuestionario.edad)
-        tr
-          td #{preguntas.etnia}
-          td= display(cuestionario.etnia)
-        tr
-          td #{preguntas.remuneracion}
-          td= display(cuestionario.remuneracion)
-        tr
           td #{preguntas.como_elige_directivos}
           td= display(cuestionario.como_elige_directivos)
         tr
@@ -151,6 +115,9 @@ block content
         tr
           td #{preguntas.frecuencia_reune_directivos_socios}
           td= display(cuestionario.frecuencia_reune_directivos_socios)
+        tr
+          td #{preguntas.otra_frecuencia_reune_directivos_socios}
+          td= display(cuestionario.otra_frecuencia_reune_directivos_socios)
         tr
           td #{preguntas.mecanismo_decision}
           td= display(cuestionario.mecanismo_decision)
@@ -290,6 +257,9 @@ block content
           td #{preguntas.forma_rendicion_cuentas}
           td= display(cuestionario.forma_rendicion_cuentas)
         tr
+          td #{preguntas.otra_forma_rendicion_cuentas}
+          td= display(cuestionario.otra_forma_rendicion_cuentas)
+        tr
           td #{preguntas.frecuencia_rendicion_cuentas}
           td= display(cuestionario.frecuencia_rendicion_cuentas)
         tr
@@ -329,6 +299,9 @@ block content
           td #{preguntas.derechos_organizacion_trabaja}
           td= display(cuestionario.derechos_organizacion_trabaja)
         tr
+          td #{preguntas.otros_derechos_organizacion_trabaja}
+          td= display(cuestionario.otros_derechos_organizacion_trabaja)
+        tr
           td #{preguntas.organizacion_orienta_asociados}
           td= display(cuestionario.organizacion_orienta_asociados)
         tr
@@ -337,6 +310,9 @@ block content
         tr
           td #{preguntas.organizacion_estrategias_derechos}
           td= display(cuestionario.organizacion_estrategias_derechos)
+        tr
+          td #{preguntas.otra_organizacion_estrategias_derechos}
+          td= display(cuestionario.otra_organizacion_estrategias_derechos)
         tr
           td #{preguntas.organizacion_circula_informacion}
           td= display(cuestionario.organizacion_circula_informacion)
@@ -371,8 +347,14 @@ block content
           td #{preguntas.organizacion_participa_otras_orga}
           td= display(cuestionario.organizacion_participa_otras_orga)
         tr
+          td #{preguntas.otra_organizacion_participa_otras_orga}
+          td= display(cuestionario.otra_organizacion_participa_otras_orga)
+        tr
           td #{preguntas.organizacion_motivacion_otras_orga}
           td= display(cuestionario.organizacion_motivacion_otras_orga)
+        tr
+          td #{preguntas.otra_organizacion_motivacion_otras_orga}
+          td= display(cuestionario.otra_organizacion_motivacion_otras_orga)
         tr
           td #{preguntas.organizacion_asiste_otros_espacios_participa}
           td= display(cuestionario.organizacion_asiste_otros_espacios_participa)
@@ -401,8 +383,14 @@ block content
           td #{preguntas.organizacion_participa_en}
           td= display(cuestionario.organizacion_participa_en)
         tr
+          td #{preguntas.otra_organizacion_participa_en}
+          td= display(cuestionario.otra_organizacion_participa_en)
+        tr
           td #{preguntas.organizacion_dificultades_efectiva_participa}
           td= display(cuestionario.organizacion_dificultades_efectiva_participa)
+        tr
+          td #{preguntas.otra_organizacion_dificultades_efectiva_participa}
+          td= display(cuestionario.otra_organizacion_dificultades_efectiva_participa)
         tr
           td #{preguntas.organizacion_logra_proyectos_con_munadmon}
           td= display(cuestionario.organizacion_logra_proyectos_con_munadmon)
@@ -416,6 +404,12 @@ block content
           td #{preguntas.organizacion_quienes_apoyan}
           td= display(cuestionario.organizacion_quienes_apoyan)
         tr
+          td #{preguntas.nombre_organizacion_quienes_apoyan}
+          td= display(cuestionario.nombre_organizacion_quienes_apoyan)
+        tr
+          td #{preguntas.organizacion_apoyo_en}
+          td= display(cuestionario.organizacion_apoyo_en)
+        tr
           td #{preguntas.organizacion_apoyo_en}
           td= display(cuestionario.organizacion_apoyo_en)
         tr
@@ -428,8 +422,8 @@ block content
           td #{preguntas.telefono_facilitador}
           td= display(cuestionario.telefono_facilitador)
         tr
-          td #{preguntas.correo_electronico}
-          td= display(cuestionario.correo_electronico)
+          td #{preguntas.correo_electronico_facilitador}
+          td= display(cuestionario.correo_electronico_facilitador)
         tr
           td #{preguntas.firma_facilitador}
           td= display(cuestionario.firma_facilitador)

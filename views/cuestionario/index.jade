@@ -6,14 +6,10 @@ block content
 
   table.table.table-bordered.table-striped(style="width:100%")
     tr
+        th.last
         th #{preguntas.codigo}
         th #{preguntas.fecha_aplicacion}
         th #{preguntas.municipio_encuesta}
-        th #{preguntas.nombre}
-        th #{preguntas.apellidos}
-        th #{preguntas.cargo}
-        th #{preguntas.telefono}
-        th #{preguntas.correo_electronico}
         th #{preguntas.nombre_organizacion}
         th #{preguntas.sigla_organizacion}
         th #{preguntas.direccion_organizacion}
@@ -40,13 +36,6 @@ block content
         th #{preguntas.motivo_aumentdismi}
         th #{preguntas.figura_directiva}
         th #{preguntas.cual_figu_direc}
-        th #{preguntas.cargo}
-        th #{preguntas.directivos}
-        th #{preguntas.genero}
-        th #{preguntas.orient_sexual}
-        th #{preguntas.edad}
-        th #{preguntas.etnia}
-        th #{preguntas.remuneracion}
         th #{preguntas.como_elige_directivos}
         th #{preguntas.comite_grupo_mesas}
         th #{preguntas.tipo_de_comites}
@@ -54,6 +43,7 @@ block content
         th #{preguntas.frecuen_figudirectiva}
         th #{preguntas.otra_frecuenc}
         th #{preguntas.frecuencia_reune_directivos_socios}
+        th #{preguntas.otra_frecuencia_reune_directivos_socios}
         th #{preguntas.mecanismo_decision}
         th #{preguntas.otro_cual_mecanism}
         th #{preguntas.quien_decide}
@@ -100,6 +90,7 @@ block content
         th #{preguntas.otro_medios_comunicacion}
         th #{preguntas.rendicion_cuentas}
         th #{preguntas.forma_rendicion_cuentas}
+        th #{preguntas.otra_forma_rendicion_cuentas}
         th #{preguntas.frecuencia_rendicion_cuentas}
         th #{preguntas.otra_frecuencia_rendicion_cuentas}
         th #{preguntas.medios_utiliza_comunicacion_interna}
@@ -113,9 +104,11 @@ block content
         th #{preguntas.se_socializa_conocimiento}
         th #{preguntas.replica_formacion_a_organizaciones_victimas_cercanas}
         th #{preguntas.derechos_organizacion_trabaja}
+        th #{preguntas.otros_derechos_organizacion_trabaja}
         th #{preguntas.organizacion_orienta_asociados}
         th #{preguntas.organizacion_si_orienta_asociados}
         th #{preguntas.organizacion_estrategias_derechos}
+        th #{preguntas.otra_organizacion_estrategias_derechos}
         th #{preguntas.organizacion_circula_informacion}
         th #{preguntas.organizacion_si_circula_informacion}
         th #{preguntas.otro_organizacion_si_circula_informacion}
@@ -127,7 +120,9 @@ block content
         th #{preguntas.organizacion_inscrita_otras_orga}
         th #{preguntas.organizacion_si_inscrita_otras_orga}
         th #{preguntas.organizacion_participa_otras_orga}
+        th #{preguntas.otra_organizacion_participa_otras_orga}
         th #{preguntas.organizacion_motivacion_otras_orga}
+        th #{preguntas.otra_organizacion_motivacion_otras_orga}
         th #{preguntas.organizacion_asiste_otros_espacios_participa}
         th #{preguntas.organizacion_si_asiste_otros_espacios_participa}
         th #{preguntas.organizacion_comite_mmpv}
@@ -137,22 +132,33 @@ block content
         th #{preguntas.organizacion_subcomite_ctjt}
         th #{preguntas.organizacion_subcomite_ctjt_cuales}
         th #{preguntas.organizacion_participa_en}
+        th #{preguntas.otra_organizacion_participa_en}
         th #{preguntas.organizacion_dificultades_efectiva_participa}
+        th #{preguntas.otra_organizacion_dificultades_efectiva_participa}
         th #{preguntas.organizacion_logra_proyectos_con_munadmon}
         th #{preguntas.organizacion_cuales_propuestas}
         th #{preguntas.organizacion_seguimiento_a_propuestas}
         th #{preguntas.organizacion_quienes_apoyan}
+        th #{preguntas.nombre_organizacion_quienes_apoyan}
+        th #{preguntas.organizacion_apoyo_en}
         th #{preguntas.organizacion_apoyo_en}
         th #{preguntas.nombre_facilitador}
         th #{preguntas.institucion_representa_facilitador}
         th #{preguntas.telefono_facilitador}
-        th #{preguntas.correo_electronico}
+        th #{preguntas.correo_electronico_facilitador}
         th #{preguntas.firma_facilitador}
         th #{preguntas.observaciones}
-        th.last
 
     each cuestionario in cuestionarios
       tr
+        td
+          a(href="/cuestionarios/" + cuestionario._id + "/detail", title="Detail")
+            i.icon-zoom-in
+          a(href="/cuestionarios/" + cuestionario._id + "/edit", title="Edit")
+            i.icon-edit
+          a(href="/cuestionarios/" + cuestionario._id + "/delete", title="Delete")
+            i.icon-remove
+
         td= display(cuestionario.codigo)
         td= display(cuestionario.fecha_aplicacion)
         td= display(cuestionario.municipio)
@@ -296,13 +302,3 @@ block content
         td= display(cuestionario.correo_electronico)
         td= display(cuestionario.firma_facilitador)
         td= display(cuestionario.observaciones)
-
-        td
-          a(href="/cuestionarios/" + cuestionario._id + "/detail", title="Detail")
-            i.icon-zoom-in
-          |
-          a(href="/cuestionarios/" + cuestionario._id + "/edit", title="Edit")
-            i.icon-edit
-          |
-          a(href="/cuestionarios/" + cuestionario._id + "/delete", title="Delete")
-            i.icon-remove

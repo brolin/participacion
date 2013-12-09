@@ -34,5 +34,8 @@ mixin select(field, value, options)
     - each opcion in options
       option #{opcion}
 
+mixin tagsInput(field, value)
+  input.span6(type="text", name= field, value= value, data-role="tagsinput", placeholder="Agregue el nombre y presione enter")
+
 mixin errorMessage(model, field)
   !{errorFor(model, field)}

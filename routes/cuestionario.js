@@ -64,7 +64,10 @@ module.exports = function(app) {
 
         res.locals.cuestionario.save(function(err) {
             if (err) {
-                res.render('cuestionario/edit');
+                res.render('cuestionario/edit', {
+                  preguntas : Preguntas,
+                  opcionesRespuesta :OpcionesRespuesta
+                });
             } else {
                 res.redirect('/cuestionarios');
             }
