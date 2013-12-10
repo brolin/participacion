@@ -62,7 +62,7 @@ module.exports = function(app) {
     app.post('/cuestionarios/:cuestionarioId/edit', function(req, res) {
         mapper.map(req.body).to(res.locals.cuestionario);
 
-        res.locals.cuestionario.save(function(err) {
+      res.locals.cuestionario.save(function(err) {
             if (err) {
                 res.render('cuestionario/edit', {
                   preguntas : Preguntas,

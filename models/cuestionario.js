@@ -8,8 +8,8 @@ function upperCase(val) {
 
 var Cuestionario = new Schema({
     codigo: { type: String, index: true, unique: true, required: true },
-    fecha_aplicacion: { type: String, set: upperCase, default: 'SIN INFORMACION', required: true },
-    municipio_encuesta: { type: String, set: upperCase, default: 'SIN INFORMACION', required: true },
+    fecha_aplicacion: { type: String, set: upperCase, required: true, default: 'SIN INFORMACION' },
+    municipio_encuesta: { type: String, set: upperCase, required: true, default: 'SIN INFORMACION' },
     nombre: { type: String, set: upperCase, default: 'SIN INFORMACION' },
     apellidos: { type: String, set: upperCase, default: 'SIN INFORMACION' },
     cargo_quien_responde: { type: String, set: upperCase, default: 'SIN INFORMACION' },
@@ -159,7 +159,7 @@ var Cuestionario = new Schema({
     telefono_facilitador: { type: String, set: upperCase, default: 'SIN INFORMACION' },
     correo_electronico_facilitador: { type: String, set: upperCase, default: 'SIN INFORMACION' },
     firma_facilitador: { type: String, set: upperCase, default: 'SIN INFORMACION' },
-    observaciones: { type: String, set: upperCase , default: 'SIN INFORMACION'}
+    observaciones: { type: String, set: upperCase, default: 'SIN INFORMACION' }
 });
 
 Cuestionario.plugin(uniqueValidator);
