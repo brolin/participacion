@@ -8,27 +8,27 @@ block content
       legend Create a new Quienresponde
 
       .control-group
-        mixin label("nombre", "Nombre")
+        mixin label("nombre", preguntas.nombre)
         .controls
           mixin text("nombre", quienresponde.nombre)
           mixin errorMessage(quienresponde, 'nombre')
       .control-group
-        mixin label("apellidos", "Apellidos")
+        mixin label("apellidos", preguntas.apellidos)
         .controls
           mixin text("apellidos", quienresponde.apellidos)
           mixin errorMessage(quienresponde, 'apellidos')
       .control-group
-        mixin label("cargo", "Cargo")
+        mixin label("cargo", preguntas.cargo)
         .controls
           mixin text("cargo", quienresponde.cargo)
           mixin errorMessage(quienresponde, 'cargo')
       .control-group
-        mixin label("telefono", "Telefono")
+        mixin label("telefono", preguntas.telefono)
         .controls
           mixin text("telefono", quienresponde.telefono)
           mixin errorMessage(quienresponde, 'telefono')
       .control-group
-        mixin label("correo_electronico", "Correo_electronico")
+        mixin label("correo_electronico", preguntas.correo_electronico)
         .controls
           mixin text("correo_electronico", quienresponde.correo_electronico)
           mixin errorMessage(quienresponde, 'correo_electronico')
