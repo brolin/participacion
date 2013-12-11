@@ -32,7 +32,7 @@ var Preguntas = {
   "cuantos_asociados_actualmente": "¿Cuántos asociados tiene actualmente la organización? (Aprox): ",
   "motivo_aumentdismi": "Si aumentó o disminuyó el número de integrantes, ¿Cuáles fueron los motivos? (Escriba resumido, si lo sabe): ",
   "figura_directiva": "¿La organización tiene una figura directiva?: ",
-  "cual_figu_direc": "¿Cuál?: ",
+  "cual_figu_direc": "¿Cuál figura directiva?: ",
   "cargo": "Cargo (Escribir): ",
   "directivos": "Es directivo?: ",
   "genero": "Género: ",

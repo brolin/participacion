@@ -204,6 +204,11 @@ block content
                 mixin select("figura_directiva", cuestionario.figura_directiva, opcionesRespuesta.figura_directiva)
                 mixin errorMessage(figura_directiva, 'figura_directiva')
             .control-group
+              mixin label("cual_figu_direc", preguntas.cual_figu_direc)
+              .controls
+                mixin text("cual_figu_direc", cuestionario.cual_figu_direc)
+                mixin errorMessage(cual_figu_direc, 'cual_figu_direc')
+            .control-group
               mixin label("agregar_cargos", "Presione click en el botón para agregar uno a uno la estructura de la organización")
               .controls
                 a(href="/cuestionarios/#{cuestionario.id}/cargos/create", role="button",class="btn",data-toggle="modal", target="parent") Agregar estructura
