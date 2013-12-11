@@ -3,13 +3,13 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 function upperCase(val) {
-  return val.toUpperCase();
+  return val.toString.toUpperCase();
 }
 
 var Cuestionario = new Schema({
-    codigo: { type: String, index: true },
-    fecha_aplicacion: { type: String, set: upperCase },
-    municipio_encuesta: { type: String, set: upperCase },
+    codigo: { type: String, index: true, unique: true, required: true },
+    fecha_aplicacion: { type: String, set: upperCase, required: true, default: 'SIN INFORMACION' },
+    municipio_encuesta: { type: String, set: upperCase, required: true, default: 'SIN INFORMACION' },
     nombre_organizacion: { type: String, set: upperCase, default: 'SIN INFORMACION' },
     sigla_organizacion: { type: String, set: upperCase, default: 'SIN INFORMACION' },
     direccion_organizacion: { type: String, set: upperCase, default: 'SIN INFORMACION' },
