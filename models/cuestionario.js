@@ -35,6 +35,7 @@ var Cuestionario = new Schema({
     cuantos_asociados_actualmente: { type: String, default: 'SIN INFORMACION' },
     motivo_aumentdismi: { type: String, default: 'SIN INFORMACION' },
     figura_directiva: { type: String, default: 'SIN INFORMACION' },
+    cual_figu_direc: { type: String, default: 'SIN INFORMACION' },
     como_elige_directivos: { type: String, default: 'SIN INFORMACION' },
     comite_grupo_mesas: { type: String, default: 'SIN INFORMACION' },
     tipo_de_comites: { type: String, default: 'SIN INFORMACION' },
