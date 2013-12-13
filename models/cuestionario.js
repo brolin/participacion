@@ -7,7 +7,7 @@ function upperCase(val) {
 }
 
 var Cuestionario = new Schema({
-    codigo: { type: String, index: true, unique: true, required: true },
+    codigo: { type: String, index: true, required: true },
     fecha_aplicacion: { type: String, required: true, default: 'SIN INFORMACION' },
     municipio_encuesta: { type: String, required: true, default: 'SIN INFORMACION' },
     nombre_organizacion: { type: String, default: 'SIN INFORMACION' },
