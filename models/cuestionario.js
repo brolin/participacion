@@ -141,7 +141,7 @@ var Cuestionario = new Schema({
     organizacion_quienes_apoyan: { type: String, default: 'SIN INFORMACION' },
     nombre_organizacion_quienes_apoyan: { type: String, default: 'SIN INFORMACION' },
     organizacion_apoyo_en: { type: String, default: 'SIN INFORMACION' },
-    organizacion_apoyo_en: { type: String, default: 'SIN INFORMACION' },
+    otra_organizacion_apoyo_en: { type: String, default: 'SIN INFORMACION' },
     nombre_facilitador: { type: String, default: 'SIN INFORMACION' },
     institucion_representa_facilitador: { type: String, default: 'SIN INFORMACION' },
     telefono_facilitador: { type: String, default: 'SIN INFORMACION' },
