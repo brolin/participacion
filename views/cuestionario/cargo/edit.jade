@@ -7,47 +7,47 @@ block content
       legend Edit Cargo
 
       .control-group
-        mixin label("cargo", "Cargo")        
+        mixin label("cargo", "Cargo")
         .controls
           mixin text("cargo", cargo.cargo)
           mixin errorMessage(cargo, 'cargo')
       .control-group
-        mixin label("directivos", "Directivos")        
+        mixin label("directivos", "Directivos")
         .controls
-          mixin text("directivos", cargo.directivos)
+          mixin select("directivos", cargo.directivos, opcionesRespuesta.directivos)
           mixin errorMessage(cargo, 'directivos')
       .control-group
-        mixin label("genero", "Genero")        
+        mixin label("genero", "Genero")
         .controls
-          mixin text("genero", cargo.genero)
+          mixin select("genero", cargo.genero, opcionesRespuesta.genero)
           mixin errorMessage(cargo, 'genero')
       .control-group
-        mixin label("orient_sexual", "Orient_sexual")        
+        mixin label("orient_sexual", "Orient_sexual")
         .controls
-          mixin text("orient_sexual", cargo.orient_sexual)
+          mixin select("orient_sexual", cargo.orient_sexual, opcionesRespuesta.orient_sexual)
           mixin errorMessage(cargo, 'orient_sexual')
       .control-group
-        mixin label("edad", "Edad")        
+        mixin label("edad", "Edad")
         .controls
           mixin text("edad", cargo.edad)
           mixin errorMessage(cargo, 'edad')
       .control-group
-        mixin label("etnia", "Etnia")        
+        mixin label("etnia", "Etnia")
         .controls
           mixin text("etnia", cargo.etnia)
           mixin errorMessage(cargo, 'etnia')
       .control-group
-        mixin label("remuneracion", "Remuneracion")        
+        mixin label("remuneracion", "Remuneracion")
         .controls
-          mixin text("remuneracion", cargo.remuneracion)
+          mixin select("remuneracion", cargo.remuneracion, opcionesRespuesta.remuneracion)
           mixin errorMessage(cargo, 'remuneracion')
-      .control-group
-        mixin label("cuestionario_id", "Cuestionario_id")        
+      .control-group(style="display:none")
+        mixin label("cuestionario_id", "Cuestionario_id")
         .controls
           mixin text("cuestionario_id", cargo.cuestionario_id)
           mixin errorMessage(cargo, 'cuestionario_id')
 
     .form-actions
-      a.btn.btn-warning(href="/cuestionario/cargos") Back
-      | 
+      // a.btn.btn-warning(href="/cuestionario/cargos") Back
+      // |
       input.btn.btn-primary(type="submit", value="Save")

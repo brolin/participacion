@@ -47,7 +47,7 @@ module.exports = function(app) {
     }
 
   app.get('/cuestionario/:cuestionario_id/cargos', getCargos, function(req, res) {
-    console.log(req.params.cargos);
+    //console.log(req.params.cargos);
     res.render('cuestionario/cargo/index', { cargos : req.params.cargos });
   });
 

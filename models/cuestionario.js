@@ -2,9 +2,9 @@ var mongoose = require('mongoose'),
     uniqueValidator = require('mongoose-unique-validator'),
     Schema = mongoose.Schema;
 
-// function upperCase(val) {
-//   return val.toString.toUpperCase();
-// }
+function upperCase(val) {
+  return val.toString.toUpperCase();
+}
 
 var Cuestionario = new Schema({
     codigo: { type: String, index: true, unique: true, required: true },

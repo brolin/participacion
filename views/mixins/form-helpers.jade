@@ -24,11 +24,9 @@ mixin datetime(field, value)
 
 mixin selectMultiple(field, value, options)
   -var options= options
-  - console.log(value)
   -var valores = value.toUpperCase().split(",")
   select.selectpicker.span6(id=field, name=field, value= value, multiple, data-live-search="true", data-container="body")
     - each opcion in options
-      - console.log(JSON.stringify(valores))
       - if(valores.indexOf(opcion) > -1)
         option(selected="true") #{opcion}
       - else
@@ -36,9 +34,8 @@ mixin selectMultiple(field, value, options)
 
 mixin select(field, value, options)
   -var options= options
-  - console.log(value)
   -var valores = value.toUpperCase().split(",")
-  select.selectpicker.span2(id=field, name=field, value= value, data-live-search="true", data-container="body")
+  select.selectpicker.span6(id=field, name=field, value= value, data-live-search="true", data-container="body")
     - each opcion in options
       - if(valores.indexOf(opcion) > -1)
         option(selected="true") #{opcion}

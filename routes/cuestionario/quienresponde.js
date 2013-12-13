@@ -47,7 +47,7 @@ module.exports = function(app) {
     }
 
   app.get('/cuestionario/:cuestionario_id/quienrespondes', getQuienesResponden, function(req, res) {
-    console.log(req.params.cargos);
+    //console.log(req.params.cargos);
     res.render('cuestionario/quienresponde/index', { quienrespondes : req.params.quienresponde });
   });
 
