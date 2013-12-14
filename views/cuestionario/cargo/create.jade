@@ -15,17 +15,17 @@ block content
       .control-group
         mixin label("directivos", preguntas.directivos)
         .controls
-          mixin select("directivos", cargo.directivos, opcionesRespuesta.directivos)
+          mixin selectCreate("directivos", cargo.directivos, opcionesRespuesta.directivos)
           mixin errorMessage(cargo, 'directivos')
       .control-group
         mixin label("genero", preguntas.genero)
         .controls
-          mixin select("genero", cargo.genero, opcionesRespuesta.genero)
+          mixin selectCreate("genero", cargo.genero, opcionesRespuesta.genero)
           mixin errorMessage(cargo, 'genero')
       .control-group
         mixin label("orient_sexual", preguntas.orient_sexual)
         .controls
-          mixin select("orient_sexual", cargo.orient_sexual, opcionesRespuesta.orient_sexual)
+          mixin selectCreate("orient_sexual", cargo.orient_sexual, opcionesRespuesta.orient_sexual)
           mixin errorMessage(cargo, 'orient_sexual')
       .control-group
         mixin label("edad", preguntas.edad)
@@ -40,7 +40,7 @@ block content
       .control-group
         mixin label("remuneracion", preguntas.remuneracion)
         .controls
-          mixin select("remuneracion", cargo.remuneracion, opcionesRespuesta.remuneracion)
+          mixin selectCreate("remuneracion", cargo.remuneracion, opcionesRespuesta.remuneracion)
           mixin errorMessage(cargo, 'remuneracion')
       .control-group(style="display:none")
         mixin label("cuestionario_id", "Cuestionario_id")

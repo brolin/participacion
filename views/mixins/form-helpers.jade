@@ -42,6 +42,12 @@ mixin select(field, value, options)
       - else
         option #{opcion}
 
+mixin selectCreate(field, value, options)
+  -var options= options
+  select.selectpicker.span6(id=field, name=field, value= value, data-live-search="true", data-container="body")
+    - each opcion in options
+      option #{opcion}
+
 mixin tagsInput(field, value)
   input.span6(type="text", name= field, value= value, data-role="tagsinput", placeholder="Agregue el nombre y presione enter")
 
