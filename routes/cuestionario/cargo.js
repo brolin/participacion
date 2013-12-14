@@ -1,4 +1,6 @@
 var Cargo = require('../../models/cuestionario/cargo'),
+    Preguntas = require('../../data/Preguntas'),
+    OpcionesRespuesta = require('../../data/OpcionesRespuesta'),
     mapper = require('../../lib/model-mapper');
 
 module.exports = function(app) {
@@ -53,7 +55,10 @@ module.exports = function(app) {
 
 
     app.get('/cuestionario/cargos/:cargoId/edit', function(req, res) {
-        res.render('cuestionario/cargo/edit');
+        res.render('cuestionario/cargo/edit',{
+          preguntas: Preguntas,
+          opcionesRespuesta: OpcionesRespuesta
+        });
     });
 
     app.post('/cuestionario/cargos/:cargoId/edit', function(req, res) {
